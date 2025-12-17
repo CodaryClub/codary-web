@@ -14,7 +14,7 @@ export const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           {/* Large Icon with Glow */}
-          <div className="flex justify-center mb-12 relative">
+          <div className="flex justify-center mb-12 relative mt-24 md:mt-0">
             <div className="absolute inset-0 bg-codary-red/20 blur-[100px] rounded-full transform scale-150" />
             <motion.div 
               animate={{ y: [0, -20, 0] }}
@@ -53,7 +53,7 @@ export const Hero = () => {
             transition={{ delay: 0.6, duration: 0.6 }}
             className="flex flex-col sm:flex-row justify-center gap-6 mb-16"
           >
-            <a href="#discover" className="px-10 py-4 bg-codary-red text-white rounded-full font-bold text-lg hover:bg-red-700 transition-all shadow-lg hover:shadow-codary-red/50 hover:-translate-y-1 flex items-center justify-center group">
+            <a href="#technologies" className="px-10 py-4 bg-codary-red text-white rounded-full font-bold text-lg hover:bg-red-700 transition-all shadow-lg hover:shadow-codary-red/50 hover:-translate-y-1 flex items-center justify-center group">
               Descubre Más
               <ChevronRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
             </a>

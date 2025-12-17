@@ -23,13 +23,21 @@ export const Home = () => {
         <div id="home">
           <Hero />
         </div>
-        <Technologies />
+        <div id="technologies">
+          <Technologies />
+        </div>
         <WhyChooseUs />
         <Sponsors />
-        <Disciplines />
+        <div id="disciplines">
+          <Disciplines />
+        </div>
         <div id="about">
-          <History />
-          <Team />
+          <div id="history">
+            <History />
+          </div>
+          <div id="team">
+            <Team />
+          </div>
         </div>
         <div id="contact">
           <ContactForm />

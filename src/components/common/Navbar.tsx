@@ -40,10 +40,9 @@ export const Navbar = () => {
 
   const navLinks = [
     { name: 'Inicio', id: 'home' },
-    { name: 'Nosotros', id: 'about' },
-    { name: 'Proyectos', id: 'projects' },
-    { name: 'Eventos', id: 'events' },
-    { name: 'Blog', id: 'blog' },
+    { name: 'Disciplinas', id: 'disciplines' },
+    { name: 'Historia', id: 'history' },
+    { name: 'Equipo', id: 'team' },
     { name: 'Contacto', id: 'contact' },
   ];
 
