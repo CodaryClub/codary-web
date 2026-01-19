@@ -1,8 +1,5 @@
 const sponsors = [
   { name: 'Universidad Católica de Cuenca', color: 'bg-red-500' },
-  { name: 'Systemia', color: 'bg-blue-500' },
-  { name: 'IEEE', color: 'bg-yellow-500' },
-  { name: 'Digital Leaders', color: 'bg-green-500' },
 ];
 
 export const Sponsors = () => {

@@ -6,9 +6,7 @@ const features = [
     title: 'Comunidad Activa',
     description: 'Únete a más de 500 desarrolladores apasionados que comparten conocimientos diariamente.',
     icon: Users,
-    // Fondo Pastel Claro (Claro) / Fondo Transparente Oscuro (Oscuro)
     bg: 'bg-blue-100 dark:bg-blue-900/30',
-    // Ícono Sólido (Claro) / Ícono Pastel (Oscuro)
     iconText: 'text-blue-600 dark:text-blue-300',
   },
   {
@@ -29,7 +27,6 @@ const features = [
     title: 'Certificación',
     description: 'Obtén reconocimiento por tus logros y habilidades demostradas en el club.',
     icon: Award,
-    // Usamos el rojo de Codary como acento principal.
     bg: 'bg-yellow-100 dark:bg-yellow-900/30',
     iconText: 'text-yellow-600 dark:text-yellow-300',
   },

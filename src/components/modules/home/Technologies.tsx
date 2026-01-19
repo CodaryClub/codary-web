@@ -13,7 +13,6 @@ import VercelIcon from '../../../assets/icons/vercel.svg?react';
 import JsIcon from '../../../assets/icons/javascript.svg?react';
 import HtmlIcon from '../../../assets/icons/html.svg?react';
 import CssIcon from '../../../assets/icons/css.svg?react';
-// import AngularIcon from '../../../assets/icons/angular.svg?react';
 
 
 const technologies = [
@@ -31,7 +30,6 @@ const technologies = [
   { name: 'JavaScript', icon: JsIcon, color: 'text-yellow-400' },
   { name: 'HTML', icon: HtmlIcon, color: 'text-orange-500' },
   { name: 'CSS', icon: CssIcon, color: 'text-blue-500' },
-  // { name: 'Angular', icon: AngularIcon, color: 'text-red-600' },
 ];
 
 export const Technologies = () => {

@@ -3,7 +3,7 @@ import { Calendar, Target, Lightbulb } from 'lucide-react';
 
 const milestones = [
   {
-    year: '2023',
+    year: '2025',
     title: 'El Inicio',
     description: 'Nacimos con la convicción de que el código es el lenguaje del futuro. Un pequeño grupo de estudiantes con una gran visión.',
     icon: Calendar,
