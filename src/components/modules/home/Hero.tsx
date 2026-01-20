@@ -5,8 +5,7 @@ import codaryLogo from '../../../assets/icons/codary.png';
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent transition-colors duration-300">
-      {/* Abstract Background Elements */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-codary-red/10 rounded-full blur-3xl filter opacity-50 animate-pulse" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-codary-red/10 rounded-full blur-2xl filter opacity-50 animate-pulse will-change-[filter,opacity]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <motion.div
@@ -14,19 +13,17 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          {/* Large Icon with Glow */}
           <div className="flex justify-center mb-12 relative mt-24 md:mt-0">
-            <div className="absolute inset-0 bg-codary-red/20 blur-[100px] rounded-full transform scale-150" />
+            <div className="absolute inset-0 bg-codary-red/20 blur-3xl rounded-full transform scale-150 will-change-[filter]" />
             <motion.div 
               animate={{ y: [0, -20, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="relative z-10"
+              className="relative z-10 will-change-transform"
             >
               <img src={codaryLogo} alt="Codary" className="w-48 h-48 md:w-64 md:h-64 object-contain drop-shadow-2xl" />
             </motion.div>
           </div>
           
-          {/* Gradient Title */}
           <motion.h1 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}

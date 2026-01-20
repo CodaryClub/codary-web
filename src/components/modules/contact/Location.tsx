@@ -1,5 +1,7 @@
 import { MapPin, Phone, Mail } from 'lucide-react';
-import { InteractiveMap } from './InteractiveMap';
+import { lazy, Suspense } from 'react';
+
+const InteractiveMap = lazy(() => import('./InteractiveMap').then(module => ({ default: module.InteractiveMap })));
 
 export const Location = () => {
   return (
@@ -47,7 +49,13 @@ export const Location = () => {
           </div>
 
           <div className="h-96 bg-gray-200 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg relative border border-gray-100 dark:border-gray-700 z-0">
-            <InteractiveMap />
+            <Suspense fallback={
+              <div className="w-full h-full flex items-center justify-center bg-gray-100 dark:bg-gray-900">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-codary-red"></div>
+              </div>
+            }>
+              <InteractiveMap />
+            </Suspense>
           </div>
         </div>
       </div>

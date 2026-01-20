@@ -33,10 +33,12 @@ export const Navbar = () => {
 
   const scrollToSection = (id: string) => {
     setIsMenuOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
   };
 
   const navLinks = [
@@ -50,8 +52,8 @@ export const Navbar = () => {
   return (
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/90 dark:bg-codary-darker/90 backdrop-blur-md shadow-md border-gray-100 dark:border-codary-red/20' 
+        isScrolled || isMenuOpen
+          ? 'bg-white/95 dark:bg-codary-darker/95 backdrop-blur-md shadow-md border-b border-gray-100 dark:border-codary-red/10' 
           : 'bg-white/0 dark:bg-codary-black/0 border-transparent'
       }`}
     >
@@ -59,22 +61,23 @@ export const Navbar = () => {
         <div className="flex justify-between h-20 items-center">
           <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }} className="flex items-center space-x-2 group">
             <img src={codaryLogo} alt="Codary" className="h-8 w-8 group-hover:scale-110 transition-transform duration-300" />
-            <span className={`text-xl font-bold transition-colors ${isScrolled ? 'text-codary-black dark:text-white' : 'text-codary-black dark:text-white'}`}>
+            <span className={`text-xl font-bold transition-colors ${isScrolled || isMenuOpen ? 'text-codary-black dark:text-white' : 'text-codary-black dark:text-white'}`}>
               Codary
             </span>
           </a>
           
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <button 
+              <a 
                 key={link.name}
-                onClick={() => scrollToSection(link.id)} 
-                className={`font-medium transition-colors hover:text-codary-white dark:hover:text-codary-white ${
+                href={`#${link.id}`}
+                onClick={(e) => { e.preventDefault(); scrollToSection(link.id); }} 
+                className={`font-medium transition-colors hover:text-codary-red dark:hover:text-codary-red cursor-pointer ${
                   isScrolled ? 'text-gray-600 dark:text-white/80' : 'text-gray-800 dark:text-white'
                 }`}
               >
                 {link.name}
-              </button>
+              </a>
             ))}
             
             <button 
@@ -118,17 +121,18 @@ export const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white dark:bg-codary-darker border-t border-gray-100 dark:border-codary-black/20 overflow-hidden"
+            className="md:hidden bg-white/95 dark:bg-codary-darker/95 backdrop-blur-md border-t border-gray-100 dark:border-codary-red/10 shadow-xl overflow-hidden"
           >
-            <div className="px-4 py-4 space-y-2">
+            <div className="px-6 py-8 space-y-4">
               {navLinks.map((link) => (
-                <button 
+                <a 
                   key={link.name}
-                  onClick={() => scrollToSection(link.id)} 
-                  className="block w-full text-left px-4 py-3 text-base font-medium text-gray-600 dark:text-red-100/80 hover:text-codary-red dark:hover:text-codary-red hover:bg-gray-50 dark:hover:bg-codary-red/10 rounded-lg transition-colors"
+                  href={`#${link.id}`}
+                  onClick={(e) => { e.preventDefault(); scrollToSection(link.id); }} 
+                  className="block w-full text-left px-4 py-3 text-lg font-semibold text-gray-700 dark:text-gray-200 hover:text-codary-red dark:hover:text-codary-red hover:bg-gray-50 dark:hover:bg-codary-red/5 rounded-xl transition-all cursor-pointer"
                 >
                   {link.name}
-                </button>
+                </a>
               ))}
             </div>
           </motion.div>

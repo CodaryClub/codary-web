@@ -11,35 +11,38 @@ import { Location } from '../components/modules/contact/Location';
 export const Home = () => {
   return (
     <div className="relative min-h-screen bg-white dark:bg-codary-darker transition-colors duration-300">
-      {/* Fixed Global Background */}
-      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-codary-red/5 rounded-full blur-[120px]" />
-        <div className="absolute top-[40%] right-[-10%] w-[40%] h-[40%] bg-codary-red/5 rounded-full blur-[100px]" />
-        <div className="absolute bottom-[-10%] left-[20%] w-[50%] h-[50%] bg-codary-red/5 rounded-full blur-[120px]" />
-      </div>
+      <div 
+        className="fixed inset-0 z-0 overflow-hidden pointer-events-none"
+        style={{
+          backgroundImage: `
+            radial-gradient(circle at 0% 0%, rgba(230, 57, 70, 0.05) 0%, transparent 50%),
+            radial-gradient(circle at 100% 40%, rgba(230, 57, 70, 0.05) 0%, transparent 40%),
+            radial-gradient(circle at 20% 100%, rgba(230, 57, 70, 0.05) 0%, transparent 50%)
+          `
+        }}
+      />
 
-      {/* Content */}
       <div className="relative z-10">
-        <div id="home">
+        <div id="home" className="scroll-mt-20">
           <Hero />
         </div>
-        <div id="technologies">
+        <div id="technologies" className="scroll-mt-20">
           <Technologies />
         </div>
         <WhyChooseUs />
         <Sponsors />
-        <div id="disciplines">
+        <div id="disciplines" className="scroll-mt-20">
           <Disciplines />
         </div>
         <div id="about">
-          <div id="history">
+          <div id="history" className="scroll-mt-20">
             <History />
           </div>
-          <div id="team">
+          <div id="team" className="scroll-mt-20">
             <Team />
           </div>
         </div>
-        <div id="contact">
+        <div id="contact" className="scroll-mt-20">
           <ContactForm />
           <Location />
         </div>

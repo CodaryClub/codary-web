@@ -48,9 +48,9 @@ export const Technologies = () => {
       </div>
 
       <div className="relative flex overflow-x-hidden group">
-        <div className="animate-marquee whitespace-nowrap flex space-x-16 py-4">
+        <div className="animate-marquee whitespace-nowrap flex py-4">
           {[...technologies, ...technologies].map((tech, index) => (
-            <div key={`${tech.name}-${index}`} className="flex flex-col items-center space-y-4 mx-6">
+            <div key={`${tech.name}-${index}`} className="flex flex-col items-center space-y-4 px-8">
               <div className="w-20 h-20 bg-white dark:bg-gray-800 rounded-2xl shadow-md flex items-center justify-center hover:scale-110 transition-transform duration-300 border border-gray-100 dark:border-gray-700">
                 <tech.icon className={`h-10 w-10 ${tech.color}`} />
               </div>
@@ -59,9 +59,9 @@ export const Technologies = () => {
           ))}
         </div>
         
-        <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex space-x-16 py-4">
+        <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex py-4">
            {[...technologies, ...technologies].map((tech, index) => (
-            <div key={`${tech.name}-duplicate-${index}`} className="flex flex-col items-center space-y-4 mx-6">
+            <div key={`${tech.name}-duplicate-${index}`} className="flex flex-col items-center space-y-4 px-8">
               <div className="w-20 h-20 bg-white dark:bg-gray-800 rounded-2xl shadow-md flex items-center justify-center hover:scale-110 transition-transform duration-300 border border-gray-100 dark:border-gray-700">
                 <tech.icon className={`h-10 w-10 ${tech.color}`} />
               </div>
