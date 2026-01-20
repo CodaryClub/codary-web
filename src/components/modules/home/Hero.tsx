@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
+import codaryLogo from '../../../assets/icons/codary.png';
 
 export const Hero = () => {
   return (
@@ -21,7 +22,7 @@ export const Hero = () => {
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="relative z-10"
             >
-              <img src="src/assets/icons/codary.png" alt="Codary" className="w-48 h-48 md:w-64 md:h-64 object-contain drop-shadow-2xl" />
+              <img src={codaryLogo} alt="Codary" className="w-48 h-48 md:w-64 md:h-64 object-contain drop-shadow-2xl" />
             </motion.div>
           </div>
           

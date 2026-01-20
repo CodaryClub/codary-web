@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
+import codaryLogo from '../../assets/icons/codary.png';
 
 export const Navbar = () => {
   const [isDark, setIsDark] = useState(false);
@@ -57,7 +58,7 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }} className="flex items-center space-x-2 group">
-            <img src="src/assets/icons/codary.png" alt="Codary" className="h-8 w-8 group-hover:scale-110 transition-transform duration-300" />
+            <img src={codaryLogo} alt="Codary" className="h-8 w-8 group-hover:scale-110 transition-transform duration-300" />
             <span className={`text-xl font-bold transition-colors ${isScrolled ? 'text-codary-black dark:text-white' : 'text-codary-black dark:text-white'}`}>
               Codary
             </span>
