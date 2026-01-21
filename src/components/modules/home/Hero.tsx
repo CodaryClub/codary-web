@@ -58,7 +58,7 @@ export const Hero = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-xl md:text-3xl text-gray-600 dark:text-red-100/90 mb-12 max-w-3xl mx-auto font-light leading-relaxed"
           >
-            Innovación en código, <span className="text-codary-red font-semibold">comunidad en acción</span>.
+           <span className="text-codary-black font-semibold dark:text-gray-200"> Innovación en código,</span> <span className="text-codary-red font-bold">comunidad en acción</span>
           </motion.p>
           
           {/* Buttons */}
@@ -91,7 +91,7 @@ export const Hero = () => {
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-3xl font-bold text-codary-black dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-red-400 dark:to-codary-red mb-1">{stat.value}</div>
-                <div className="text-sm text-gray-500 dark:text-red-200/70 uppercase tracking-wider font-medium">{stat.label}</div>
+                <div className="text-md text-gray-500 dark:text-red-100/90 uppercase tracking-wider font-bold">{stat.label}</div>
               </div>
             ))}
           </motion.div>

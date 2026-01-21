@@ -1,5 +1,11 @@
+import logoCato from "../../../assets/icons/logo-cato.png";
+
 const sponsors = [
-  { name: 'Universidad Católica de Cuenca', color: 'bg-red-500' },
+  {
+    name: "Universidad Católica de Cuenca",
+    color: "bg-red-500",
+    logo: logoCato,
+  },
 ];
 
 export const Sponsors = () => {
@@ -12,9 +18,11 @@ export const Sponsors = () => {
 
         <div className="flex flex-wrap justify-center gap-8 md:gap-16 items-center transition-all duration-500">
           {sponsors.map((sponsor) => (
-            <div key={sponsor.name} className="flex items-center space-x-2 group cursor-pointer">
-
-              <div className={`w-8 h-8 rounded-full ${sponsor.color} group-hover:scale-110 transition-transform`} />
+            <div
+              key={sponsor.name}
+              className="flex items-center space-x-2 group cursor-pointer"
+            >
+              <img src={sponsor.logo} alt="" />
               <span className="text-xl font-bold text-gray-800 dark:text-gray-200 transition-colors">
                 {sponsor.name}
               </span>

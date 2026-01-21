@@ -5,7 +5,7 @@ const team = {
   frontend: [
     { name: 'Daniel Puma', role: 'Líder Frontend', image: 'https://imgs.search.brave.com/bHVdH5vDW3tZZDStUEXmc9Z0BcRQMIj-hdqJ8YXmP2c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjYv/NzA4LzUyNy9zbWFs/bC9taW5pbWFsaXN0/LXVzZXItcHJvZmls/ZS1pY29uLW9uLXRy/YW5zcGFyZW50LWJh/Y2tncm91bmQtcG5n/LnBuZw' },
     { name: 'Alexis Ramirez', role: 'UI/UX Designer', image: 'https://imgs.search.brave.com/bHVdH5vDW3tZZDStUEXmc9Z0BcRQMIj-hdqJ8YXmP2c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjYv/NzA4LzUyNy9zbWFs/bC9taW5pbWFsaXN0/LXVzZXItcHJvZmls/ZS1pY29uLW9uLXRy/YW5zcGFyZW50LWJh/Y2tncm91bmQtcG5n/LnBuZw' },
-    { name: 'Sebastian Jara', role: 'React Developer', image: 'https://imgs.search.brave.com/bHVdH5vDW3tZZDStUEXmc9Z0BcRQMIj-hdqJ8YXmP2c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjYv/NzA4LzUyNy9zbWFs/bC9taW5pbWFsaXN0/LXVzZXItcHJvZmls/ZS1pY29uLW9uLXRy/YW5zcGFyZW50LWJh/Y2tncm91bmQtcG5n/LnBuZw  ' },
+    { name: 'Sebastian Jara', role: 'Backend Developer', image: 'https://imgs.search.brave.com/bHVdH5vDW3tZZDStUEXmc9Z0BcRQMIj-hdqJ8YXmP2c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjYv/NzA4LzUyNy9zbWFs/bC9taW5pbWFsaXN0/LXVzZXItcHJvZmls/ZS1pY29uLW9uLXRy/YW5zcGFyZW50LWJh/Y2tncm91bmQtcG5n/LnBuZw  ' },
   ],
   backend: [
     { name: 'Mateo Pacheco', role: 'Líder Backend', image: 'https://imgs.search.brave.com/bHVdH5vDW3tZZDStUEXmc9Z0BcRQMIj-hdqJ8YXmP2c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjYv/NzA4LzUyNy9zbWFs/bC9taW5pbWFsaXN0/LXVzZXItcHJvZmls/ZS1pY29uLW9uLXRy/YW5zcGFyZW50LWJh/Y2tncm91bmQtcG5n/LnBuZw' },
@@ -13,7 +13,7 @@ const team = {
     { name: 'José Abad', role: 'Node.js Developer', image: 'https://imgs.search.brave.com/bHVdH5vDW3tZZDStUEXmc9Z0BcRQMIj-hdqJ8YXmP2c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjYv/NzA4LzUyNy9zbWFs/bC9taW5pbWFsaXN0/LXVzZXItcHJvZmls/ZS1pY29uLW9uLXRy/YW5zcGFyZW50LWJh/Y2tncm91bmQtcG5n/LnBuZw' },
   ],
   transformacion: [
-    { name: 'Genesis ', role: 'Estratega de Transformacion Digital', image: 'https://imgs.search.brave.com/bHVdH5vDW3tZZDStUEXmc9Z0BcRQMIj-hdqJ8YXmP2c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjYv/NzA4LzUyNy9zbWFs/bC9taW5pbWFsaXN0/LXVzZXItcHJvZmls/ZS1pY29uLW9uLXRy/YW5zcGFyZW50LWJh/Y2tncm91bmQtcG5n/LnBuZw' },
+    { name: 'Genesis Gaón', role: 'Estratega de Transformacion Digital', image: 'https://imgs.search.brave.com/bHVdH5vDW3tZZDStUEXmc9Z0BcRQMIj-hdqJ8YXmP2c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjYv/NzA4LzUyNy9zbWFs/bC9taW5pbWFsaXN0/LXVzZXItcHJvZmls/ZS1pY29uLW9uLXRy/YW5zcGFyZW50LWJh/Y2tncm91bmQtcG5n/LnBuZw' },
     { name: 'Juan Sebastian', role: 'Estratega de Transformacion Digital', image: 'https://imgs.search.brave.com/bHVdH5vDW3tZZDStUEXmc9Z0BcRQMIj-hdqJ8YXmP2c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjYv/NzA4LzUyNy9zbWFs/bC9taW5pbWFsaXN0/LXVzZXItcHJvZmls/ZS1pY29uLW9uLXRy/YW5zcGFyZW50LWJh/Y2tncm91bmQtcG5n/LnBuZw' },
   ]
 };
@@ -46,7 +46,7 @@ const TeamMember = ({ member, index }: { member: any, index: number }) => (
     
     <div>
       <h3 className="text-lg font-bold text-codary-black dark:text-white mb-1">{member.name}</h3>
-      <p className="text-codary-red font-medium text-xs uppercase tracking-wide">{member.role}</p>
+      <p className="text-codary-red font-bold text-md tracking-wide">{member.role}</p>
     </div>
   </motion.div>
 );

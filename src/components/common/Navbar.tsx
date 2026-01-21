@@ -72,7 +72,7 @@ export const Navbar = () => {
                 key={link.name}
                 href={`#${link.id}`}
                 onClick={(e) => { e.preventDefault(); scrollToSection(link.id); }} 
-                className={`font-medium transition-colors hover:text-codary-red dark:hover:text-codary-red cursor-pointer ${
+                className={`font-semibold transition-colors hover:text-codary-red dark:hover:text-codary-red cursor-pointer ${
                   isScrolled ? 'text-gray-600 dark:text-white/80' : 'text-gray-800 dark:text-white'
                 }`}
               >

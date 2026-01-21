@@ -1,4 +1,4 @@
-import { Github, Twitter, Instagram, Mail } from 'lucide-react';
+import { Github, Instagram, Mail } from 'lucide-react';
 
 export const Footer = () => {
   return (
@@ -25,8 +25,7 @@ export const Footer = () => {
             <h4 className="text-base font-semibold mb-2">Síguenos</h4>
             <div className="flex space-x-3">
               <a href="https://github.com/CodaryClub" className="text-gray-600 dark:text-red/60 hover:text-codary-red transition-colors"><Github className="w-5 h-5" /></a>
-              <a href="#" className="text-gray-600 dark:text-red/60 hover:text-codary-red transition-colors"><Twitter className="w-5 h-5" /></a>
-              <a href="#" className="text-gray-600 dark:text-red/60 hover:tet-codary-red transition-colors"><Instagram className="w-5 h-5" /></a>
+              <a href="https://www.instagram.com/club_codary" className="text-gray-600 dark:text-red/60 hover:tet-codary-red transition-colors"><Instagram className="w-5 h-5" /></a>
               <a href="mailto:codary.club@gmail.com" className="text-gray-600 dark:text-red/60 hover:text-codary-red transition-colors"><Mail className="w-5 h-5" /></a>
             </div>
           </div>
