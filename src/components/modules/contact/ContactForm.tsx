@@ -2,7 +2,7 @@ import { Send } from 'lucide-react';
 
 export const ContactForm = () => {
   return (
-    <section className="py-20 bg-transparent transition-colors duration-300">
+    <section className="bg-transparent transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">

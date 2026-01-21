@@ -4,7 +4,7 @@ const sponsors = [
 
 export const Sponsors = () => {
   return (
-    <section className="py-16 bg-transparent transition-colors duration-300">
+    <section className="py-0 pt-20 bg-transparent transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h3 className="text-center text-gray-500 dark:text-gray-400 text-sm font-semibold uppercase tracking-wider mb-8">
           Con el apoyo de líderes de la industria

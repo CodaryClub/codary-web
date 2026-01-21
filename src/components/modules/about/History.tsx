@@ -24,7 +24,7 @@ const milestones = [
 
 export const History = () => {
   return (
-    <section className="py-24 bg-transparent transition-colors duration-300 overflow-hidden">
+    <section className=" bg-transparent transition-colors duration-300 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

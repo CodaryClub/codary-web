@@ -34,7 +34,7 @@ const features = [
 
 export const WhyChooseUs = () => {
   return (
-    <section className="py-24 bg-transparent transition-colors duration-300">
+    <section className="bg-transparent transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2 
