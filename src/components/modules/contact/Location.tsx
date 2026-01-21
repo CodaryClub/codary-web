@@ -32,7 +32,7 @@ export const Location = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-codary-black dark:text-white">Email</h3>
-                  <p className="text-gray-600 dark:text-gray-400">contacto@codary.club</p>
+                  <p className="text-gray-600 dark:text-gray-400">codary.club@gmail.com</p>
                 </div>
               </div>
 
@@ -41,8 +41,8 @@ export const Location = () => {
                   <Phone className="h-6 w-6 text-purple-600 dark:text-purple-400" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-codary-black dark:text-white">Teléfono</h3>
-                  <p className="text-gray-600 dark:text-gray-400">+593 999 999 999</p>
+                  <h3 className="font-bold text-codary-black dark:text-white">GitHub</h3>
+                  <a href="https://github.com/CodaryClub" className="text-gray-600 dark:text-gray-400">https://github.com/CodaryClub</a>
                 </div>
               </div>
             </div>

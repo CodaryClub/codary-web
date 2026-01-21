@@ -60,7 +60,6 @@ export const Hero = () => {
             </a>
           </motion.div>
 
-          {/* Key Info Stats */}
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -68,8 +67,8 @@ export const Hero = () => {
             className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto border-t border-gray-200 dark:border-gray-800 pt-8"
           >
             {[
-              { label: 'Miembros', value: '+500' },
-              { label: 'Proyectos', value: '20+' },
+              { label: 'Miembros', value: '8' },
+              { label: 'Proyectos', value: '5' },
               { label: 'Eventos', value: 'Semanal' },
               { label: 'Comunidad', value: 'Activa' },
             ].map((stat, index) => (
