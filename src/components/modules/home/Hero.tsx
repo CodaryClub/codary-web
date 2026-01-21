@@ -1,10 +1,27 @@
 import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
 import codaryLogo from '../../../assets/icons/codary.png';
+import matrixGif from '../../../assets/icons/matrix-code.gif';
 
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent transition-colors duration-300">
+      <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
+        <div 
+          className="absolute inset-0 opacity-[0.10] dark:opacity-[0.12] transition-opacity duration-300"
+          style={{ 
+            backgroundImage: `url(${matrixGif})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            filter: 'hue-rotate(250deg) saturate(250%) brightness(0.6)',
+            maskImage: 'linear-gradient(to bottom, transparent, black 15%, black 85%, transparent), radial-gradient(circle at center, black 25%, transparent 90%)',
+            WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 15%, black 85%, transparent), radial-gradient(circle at center, black 25%, transparent 90%)',
+            maskComposite: 'intersect',
+            WebkitMaskComposite: 'source-in'
+          }}
+        />
+      </div>
+
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-codary-red/10 rounded-full blur-2xl filter opacity-50 animate-pulse will-change-[filter,opacity]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
