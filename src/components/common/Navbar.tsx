@@ -60,8 +60,8 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }} className="flex items-center space-x-2 group">
-            <img src={codaryLogo} alt="Codary" className="h-8 w-8 group-hover:scale-110 transition-transform duration-300" />
-            <span className={`text-xl font-bold transition-colors ${isScrolled || isMenuOpen ? 'text-codary-black dark:text-white' : 'text-codary-black dark:text-white'}`}>
+            <img src={codaryLogo} alt="Codary" className="h-12 w-12 group-hover:scale-110 transition-transform duration-300" />
+            <span className={`text-2xl font-bold transition-colors ${isScrolled || isMenuOpen ? 'text-codary-black dark:text-white' : 'text-codary-black dark:text-white'}`}>
               Codary
             </span>
           </a>
