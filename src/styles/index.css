@@ -1,5 +1,16 @@
 html {
+  font-size: 12px;
   scroll-behavior: smooth;
+}
+
+html.dark {
+  background-color: #0A0A0A;
+}
+
+@media (min-width: 1536px) {
+  html {
+    font-size: 15px;
+  }
 }
 
 @tailwind base;
@@ -8,7 +19,7 @@ html {
 
 @layer base {
   body {
-    @apply bg-white text-codary-black font-sans antialiased;
+    @apply bg-white dark:bg-codary-darker text-codary-black dark:text-white font-sans antialiased;
   }
 }
 

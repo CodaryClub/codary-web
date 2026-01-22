@@ -53,8 +53,8 @@ export const Navbar = () => {
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled || isMenuOpen
-          ? 'bg-white/95 dark:bg-codary-darker/95 backdrop-blur-md shadow-md border-b border-gray-100 dark:border-codary-red/10' 
-          : 'bg-white/0 dark:bg-codary-black/0 border-transparent'
+          ? 'bg-white/10 dark:bg-codary-darker/10 backdrop-blur-md dark:backdrop-blur-md shadow-md dark:shadow-md border-b border-transparent dark:border-transparent' 
+          : 'bg-white/0 dark:bg-codary-black/0 border-transparent dark:border-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,11 +82,7 @@ export const Navbar = () => {
             
             <button 
               onClick={toggleTheme}
-              className={`p-2 rounded-full transition-colors ${
-                isScrolled 
-                  ? 'bg-gray-100 dark:bg-codary-red/10 text-gray-600 dark:text-red-100/80' 
-                  : 'bg-white/20 text-gray-800 dark:text-white hover:bg-white/30'
-              }`}
+              className={`p-2 rounded-full transition-colors bg-white/20 text-gray-900 dark:text-white hover:bg-white/40`}
             >
               {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </button>

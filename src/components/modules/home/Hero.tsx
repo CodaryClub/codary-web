@@ -31,7 +31,7 @@ export const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <div className="flex justify-center mb-12 relative mt-24 md:mt-0">
-            <div className="absolute inset-0 bg-codary-red/20 blur-3xl rounded-full transform scale-150 will-change-[filter]" />
+            <div className="absolute inset-0 bg-codary-red/15 blur-3xl rounded-full transform scale-140 will-change-[filter]" />
             <motion.div 
               animate={{ y: [0, -20, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}

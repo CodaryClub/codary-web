@@ -1,4 +1,4 @@
-import { MapPin, Mail, Instagram, Github, Linkedin } from "lucide-react";
+import { MapPin, Mail, Instagram, Github } from "lucide-react";
 import { lazy, Suspense } from "react";
 
 const InteractiveMap = lazy(() =>
@@ -31,10 +31,7 @@ export const Location = () => {
                     Dirección
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Vargas Machuca, Cuenca
-                  </p>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Cuenca, Ecuador
+                    Vargas Machuca, Cuenca, Ecuador
                   </p>
                 </div>
               </div>
@@ -83,23 +80,6 @@ export const Location = () => {
                   </h3>
                   <a
                     href="https://www.instagram.com/club_codary"
-                    className="text-gray-600 dark:text-gray-400"
-                  >
-                    club_codary
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="bg-pastel-blue/30 dark:bg-blue-900/30 p-3 rounded-lg">
-                  <Linkedin className="h-6 w-6 text-blue-600 dark:text-blue-400" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-codary-black dark:text-white">
-                    LinkedIn
-                  </h3>
-                  <a
-                    href="https://www.linkedin.com/in/club-codary-7567643a7"
                     className="text-gray-600 dark:text-gray-400"
                   >
                     club_codary

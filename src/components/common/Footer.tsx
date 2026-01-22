@@ -2,7 +2,7 @@ import { Github, Instagram, Mail } from 'lucide-react';
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-100 dark:bg-black text-gray-900 dark:text-white py-6 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
+    <footer className="bg-gray-200/30 dark:bg-codary-dark text-gray-900 dark:text-white py-6 border-t border-gray-200 dark:border-codary-darker/10 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -24,14 +24,14 @@ export const Footer = () => {
           <div>
             <h4 className="text-base font-semibold mb-2">Síguenos</h4>
             <div className="flex space-x-3">
-              <a href="https://github.com/CodaryClub" className="text-gray-600 dark:text-red/60 hover:text-codary-red transition-colors"><Github className="w-5 h-5" /></a>
-              <a href="https://www.instagram.com/club_codary" className="text-gray-600 dark:text-red/60 hover:tet-codary-red transition-colors"><Instagram className="w-5 h-5" /></a>
-              <a href="mailto:codary.club@gmail.com" className="text-gray-600 dark:text-red/60 hover:text-codary-red transition-colors"><Mail className="w-5 h-5" /></a>
+              <a href="https://github.com/CodaryClub" className="text-gray-600 dark:text-white/60 hover:text-codary-red transition-colors"><Github className="w-5 h-5" /></a>
+              <a href="https://www.instagram.com/club_codary" className="text-gray-600 dark:text-white/60 hover:text-codary-red transition-colors"><Instagram className="w-5 h-5" /></a>
+              <a href="mailto:codary.club@gmail.com" className="text-gray-600 dark:text-white/60 hover:text-codary-red transition-colors"><Mail className="w-5 h-5" /></a>
             </div>
           </div>
         </div>
         
-        <div className="border-t border-gray-200 dark:border-gray-800 mt-4 pt-4 text-center text-gray-500 dark:text-white/40 text-xs">
+        <div className="border-t border-gray-200 dark:border-codary-red/10 mt-4 pt-4 text-center text-gray-500 dark:text-white/40 text-xs">
           <p>&copy; {new Date().getFullYear()} Codary. Todos los derechos reservados.</p>
         </div>
       </div>

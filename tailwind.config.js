@@ -9,10 +9,10 @@ export default {
     extend: {
       colors: {
         codary: {
-          red: '#E63946', // Vibrant corporate red
+          red: '#E63946',
           black: '#1D1D1D',
           gray: '#F3F4F6',
-          dark: '#121212', // Darker background for dark mode
+          dark: '#121212',
           darker: '#0A0A0A',
         },
         pastel: {
@@ -25,7 +25,7 @@ export default {
         sans: ['Inter', 'sans-serif'],
       },
       animation: {
-        marquee: 'marquee 40s linear infinite', // Slower speed (was 25s)
+        marquee: 'marquee 40s linear infinite',
         marquee2: 'marquee2 40s linear infinite',
       },
       keyframes: {
