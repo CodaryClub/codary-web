@@ -1,5 +1,5 @@
 html {
-  font-size: 12px;
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
@@ -7,9 +7,15 @@ html.dark {
   background-color: #0A0A0A;
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1024px) {
   html {
     font-size: 12px;
+  }
+}
+
+@media (min-width: 1536px) {
+  html {
+    font-size: 13px;
   }
 }
 
