@@ -60,11 +60,18 @@ const team = {
 
 const TeamMember = ({ member, index }: { member: any, index: number }) => (
   <motion.div 
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
+    initial={{ opacity: 0, scale: 0.9, y: 20 }}
+    whileInView={{ opacity: 1, scale: 1, y: 0 }}
     viewport={{ once: true }}
-    transition={{ delay: index * 0.1, duration: 0.8, ease: "easeOut" }}
-    className="group relative glass-card rounded-[2.5rem] p-8 transition-all duration-500 hover:-translate-y-4 cursor-pointer"
+    transition={{ delay: index * 0.1 }}
+    whileHover={{ 
+      y: -10,
+      rotateX: 2,
+      rotateY: -2,
+      transition: { duration: 0.3 }
+    }}
+    className="glass-card group relative p-10 rounded-3xl overflow-hidden cursor-pointer"
+    style={{ perspective: '1000px' }}
   >
     <div className="relative mb-8 flex justify-center">
       <div className="absolute inset-0 bg-codary-red/20 blur-[40px] rounded-full scale-75 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

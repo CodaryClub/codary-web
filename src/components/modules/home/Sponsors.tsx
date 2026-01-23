@@ -31,12 +31,18 @@ export const Sponsors = () => {
           {sponsors.map((sponsor, index) => (
             <motion.div
               key={sponsor.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
-              className="glass-card group flex items-center p-8 rounded-[2rem] border-white/10 hover:border-codary-red/30 transition-all duration-500 cursor-default"
+              whileHover={{ 
+                y: -10,
+                rotateX: 2,
+                rotateY: -2,
+                transition: { duration: 0.3 }
+              }}
+              className="glass-card group flex relative p-10 rounded-3xl overflow-hidden cursor-pointer"
+              style={{ perspective: '1000px' }}
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-white/50 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />

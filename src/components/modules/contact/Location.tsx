@@ -67,17 +67,21 @@ export const Location = () => {
 
             <div className="grid sm:grid-cols-2 gap-6">
               {contactInfo.map((info, index) => (
-                <motion.a
-                  key={info.label}
-                  href={info.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="glass-card p-6 rounded-3xl group transition-all duration-300 border-white/10 hover:border-white/20"
-                >
+                <motion.div
+              key={info.label}
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ 
+                y: -10,
+                rotateX: 2,
+                rotateY: -2,
+                transition: { duration: 0.3 }
+              }}
+              className="glass-card group relative p-10 rounded-3xl overflow-hidden cursor-pointer"
+              style={{ perspective: '1000px' }}
+            >
                   <div className="flex items-center justify-between mb-4">
                     <div className={`p-3 rounded-2xl ${info.bg} ${info.color} group-hover:scale-110 transition-transform duration-500`}>
                       <info.icon size={24} />
@@ -91,7 +95,7 @@ export const Location = () => {
                       {info.value}
                     </p>
                   </div>
-                </motion.a>
+                </motion.div>
               ))}
             </div>
           </div>

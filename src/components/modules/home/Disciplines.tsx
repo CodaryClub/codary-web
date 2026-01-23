@@ -81,7 +81,6 @@ export const Disciplines = () => {
               className="glass-card group relative p-10 rounded-3xl overflow-hidden cursor-pointer"
               style={{ perspective: '1000px' }}
             >
-              {/* Internal Glow Effect */}
               <div 
                 className="absolute -top-20 -right-20 w-40 h-40 rounded-full blur-[80px] transition-opacity opacity-0 group-hover:opacity-100"
                 style={{ backgroundColor: item.color }}
@@ -103,7 +102,6 @@ export const Disciplines = () => {
                 </p>
               </div>
 
-              {/* Bottom Line Accent */}
               <div 
                 className="absolute bottom-0 left-0 h-1 w-0 group-hover:w-full transition-all duration-500"
                 style={{ backgroundColor: item.color }}
