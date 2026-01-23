@@ -3,72 +3,82 @@ import { Users, Zap, Award, Rocket } from 'lucide-react';
 
 const features = [
   {
-    title: 'Comunidad Activa',
-    description: 'Únete a más de 500 desarrolladores apasionados que comparten conocimientos diariamente.',
+    title: 'Élite Colaborativa',
+    description: 'Únete a un núcleo de desarrolladores apasionados que iteran y comparten conocimiento en tiempo real.',
     icon: Users,
-    bg: 'bg-blue-100 dark:bg-blue-900/30',
-    iconText: 'text-blue-600 dark:text-blue-300',
+    color: '#3b82f6',
+    delay: 0.1
   },
   {
-    title: 'Aprendizaje Acelerado',
-    description: 'Nuestra metodología práctica te permite dominar nuevas tecnologías en tiempo récord.',
+    title: 'Velocidad Radical',
+    description: 'Metodologías de alto rendimiento diseñadas para que domines tecnologías complejas antes que el resto.',
     icon: Zap,
-    bg: 'bg-teal-100 dark:bg-teal-900/30',
-    iconText: 'text-teal-600 dark:text-teal-300',
+    color: '#10b981',
+    delay: 0.2
   },
   {
-    title: 'Proyectos Reales',
-    description: 'Construye portafolio trabajando en soluciones para problemas del mundo real.',
+    title: 'Impacto Real',
+    description: 'No hacemos demos. Construimos soluciones de ingeniería que resuelven problemas reales del ecosistema.',
     icon: Rocket,
-    bg: 'bg-purple-100 dark:bg-purple-900/30',
-    iconText: 'text-purple-600 dark:text-purple-300',
+    color: '#a855f7',
+    delay: 0.3
   },
   {
-    title: 'Certificación',
-    description: 'Obtén reconocimiento por tus logros y habilidades demostradas en el club.',
+    title: 'Prestigio Codary',
+    description: 'Obtén el reconocimiento de una marca que simboliza excelencia técnica y compromiso con la calidad.',
     icon: Award,
-    bg: 'bg-yellow-100 dark:bg-yellow-900/30',
-    iconText: 'text-yellow-600 dark:text-yellow-300',
+    color: '#f59e0b',
+    delay: 0.4
   },
 ];
 
 export const WhyChooseUs = () => {
   return (
-    <section className="bg-transparent transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+    <section className="py-20 pt-10 bg-transparent relative overflow-hidden transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-20">
           <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-codary-black dark:text-white mb-4"
+            className="text-5xl md:text-6xl font-black text-codary-black dark:text-white mb-8 tracking-tighter"
           >
-            ¿Por qué elegir Codary?
+            ¿Por qué <span className="text-codary-red">Codary</span>?
           </motion.h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            No somos solo un club, somos tu plataforma de lanzamiento al éxito profesional.
+          <p className="text-xl text-gray-500 dark:text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
+            Más que un club, somos el acelerador de partículas para tu carrera en la ingeniería de software.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {features.map((feature) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.05, duration: 0.4 }}
-              whileHover={{ y: -5, scale: 1.02 }} 
-              className="p-6 rounded-2xl bg-white dark:bg-codary-black border border-gray-100 dark:border-gray-800 shadow-md hover:shadow-xl transition-all duration-300"
+              transition={{ delay: feature.delay, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              whileHover={{ y: -12 }}
+              className="glass-card p-10 rounded-[2.5rem] relative overflow-hidden group border-white/10"
             >
-              <div className={`w-14 h-14 ${feature.bg} rounded-xl flex items-center justify-center mb-6`}>
-                <feature.icon className={`h-7 w-7 ${feature.iconText}`} />
+              <div 
+                className="w-16 h-16 rounded-2xl flex items-center justify-center mb-10 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6"
+                style={{ backgroundColor: `${feature.color}15`, color: feature.color }}
+              >
+                <feature.icon className="h-8 w-8" />
               </div>
               
-              <h3 className="text-xl font-bold mb-3 text-codary-black dark:text-white">{feature.title}</h3>
-              <p className="text-gray-600 dark:text-gray-400">
+              <h3 className="text-2xl font-bold mb-4 text-codary-black dark:text-white tracking-tight group-hover:text-white transition-colors">
+                {feature.title}
+              </h3>
+              <p className="text-gray-500 dark:text-gray-400 leading-relaxed font-light">
                 {feature.description}
               </p>
+
+              <div 
+                className="absolute top-0 right-0 w-1 h-0 group-hover:h-full transition-all duration-700"
+                style={{ backgroundColor: feature.color }}
+              />
             </motion.div>
           ))}
         </div>

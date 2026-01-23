@@ -7,6 +7,7 @@ import { History } from '../components/modules/about/History';
 import { Team } from '../components/modules/about/Team';
 import { ContactForm } from '../components/modules/contact/ContactForm';
 import { Location } from '../components/modules/contact/Location';
+import { Discover } from '../components/modules/home/Discover';
 
 export const Home = () => {
   return (
@@ -26,6 +27,7 @@ export const Home = () => {
         <div id="home" className="scroll-mt-20">
           <Hero />
         </div>
+        <Discover />
         <div id="technologies" className="scroll-mt-20">
           <Technologies />
         </div>

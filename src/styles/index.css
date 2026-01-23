@@ -30,6 +30,12 @@ html.dark {
 }
 
 @layer utilities {
+  .text-glow {
+    text-shadow: 0 0 15px rgba(230, 57, 70, 0.4);
+  }
+  .glass-card {
+    @apply backdrop-blur-xl bg-white/60 dark:bg-black/40 border border-white/20 dark:border-white/10 shadow-2xl;
+  }
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
@@ -37,4 +43,9 @@ html.dark {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+}
+
+::selection {
+  background: rgba(230, 57, 70, 0.3);
+  color: inherit;
 }

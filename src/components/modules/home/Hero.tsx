@@ -5,10 +5,11 @@ import matrixGif from '../../../assets/icons/matrix-code.gif';
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent transition-colors duration-300">
-      <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
+    <section className="relative min-h-[115vh] flex items-center justify-center overflow-hidden bg-transparent transition-colors duration-300">
+      {/* Background Matrix Effect */}
+      <div className="absolute inset-0 -z-30 pointer-events-none overflow-hidden">
         <div 
-          className="absolute inset-0 opacity-[0.10] dark:opacity-[0.12] transition-opacity duration-300"
+          className="absolute inset-0 opacity-[0.10] dark:opacity-[0.15] transition-opacity duration-300"
           style={{ 
             backgroundImage: `url(${matrixGif})`,
             backgroundSize: 'cover',
@@ -22,78 +23,75 @@ export const Hero = () => {
         />
       </div>
 
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-codary-red/10 rounded-full blur-2xl filter opacity-50 animate-pulse will-change-[filter,opacity]" />
+      {/* Atmospheric Background Globs */}
+      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-codary-red/10 rounded-full blur-[100px] animate-pulse pointer-events-none" />
+      <div className="absolute bottom-1/4 -right-20 w-[500px] h-[500px] bg-red-500/5 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex justify-center mb-12 relative mt-24 md:mt-0">
-            <div className="absolute inset-0 bg-codary-red/15 blur-3xl rounded-full transform scale-140 will-change-[filter]" />
+          {/* Logo Section */}
+          <div className="flex justify-center mb-10 md:mb-16 relative mt-0 md:mt-10">
+            <div className="absolute inset-0 bg-codary-red/15 blur-[80px] rounded-full transform scale-140 animate-pulse" />
+            
             <motion.div 
-              animate={{ y: [0, -20, 0] }}
+              animate={{ y: [0, -25, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="relative z-10 will-change-transform"
             >
-              <img src={codaryLogo} alt="Codary" className="w-48 h-48 md:w-64 md:h-64 object-contain drop-shadow-2xl" />
+              <img 
+                src={codaryLogo} 
+                alt="Codary" 
+                className="w-48 h-48 md:w-64 md:h-64 object-contain filter drop-shadow-[0_20px_50px_rgba(230,57,70,0.4)]" 
+              />
             </motion.div>
           </div>
           
-          <motion.h1 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-6xl md:text-8xl font-extrabold mb-6 tracking-tight"
-          >
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-codary-black to-codary-red dark:from-red-400 dark:to-codary-red">
-              Codary
-            </span>
-          </motion.h1>
+          <div className="space-y-8 mb-16 md:mb-24">
+            <motion.h1 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              className="text-6xl md:text-9xl font-black tracking-tighter"
+            >
+              <span className="bg-clip-text text-transparent bg-gradient-to-b from-codary-black via-codary-black to-codary-red dark:from-white dark:via-white dark:to-codary-red filter drop-shadow-sm">
+                Codary
+              </span>
+            </motion.h1>
+            
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="text-xl md:text-4xl text-gray-600 dark:text-red-100/90 max-w-4xl mx-auto font-light leading-tight tracking-tight px-6"
+            >
+              <span className="text-codary-black font-semibold dark:text-gray-200"> Innovación en código,</span> <span className="text-codary-red font-bold text-glow">comunidad en acción</span>
+            </motion.p>
+          </div>
           
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-xl md:text-3xl text-gray-600 dark:text-red-100/90 mb-12 max-w-3xl mx-auto font-light leading-relaxed"
-          >
-           <span className="text-codary-black font-semibold dark:text-gray-200"> Innovación en código,</span> <span className="text-codary-red font-bold">comunidad en acción</span>
-          </motion.p>
-          
-          {/* Buttons */}
+          {/* Action Buttons */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="flex flex-col sm:flex-row justify-center gap-6 mb-16"
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="flex flex-col sm:flex-row justify-center gap-4 md:gap-8 mb-10 md:mb-24 items-center"
           >
-            <a href="#technologies" className="px-10 py-4 bg-codary-red text-white rounded-full font-bold text-lg hover:bg-red-700 transition-all shadow-lg hover:shadow-codary-red/50 hover:-translate-y-1 flex items-center justify-center group">
+            <a 
+              href="#technologies" 
+              className="w-full sm:w-auto px-10 md:px-12 py-4 md:py-5 bg-codary-red text-white rounded-full font-black text-lg md:text-xl hover:bg-red-700 transition-all shadow-[0_20px_40px_rgba(230,57,70,0.3)] hover:shadow-[0_25px_50px_rgba(230,57,70,0.4)] hover:-translate-y-2 flex items-center justify-center group active:scale-95"
+            >
               Descubre Más
-              <ChevronRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+              <ChevronRight className="ml-2 h-6 md:h-7 w-6 md:w-7 group-hover:translate-x-2 transition-transform" />
             </a>
-            <a href="#contact" className="px-10 py-4 bg-white/10 backdrop-blur-sm dark:bg-white/5 text-codary-black dark:text-red-50 border border-gray-200 dark:border-gray-700 rounded-full font-bold text-lg hover:border-codary-red hover:text-codary-red dark:hover:border-codary-red dark:hover:text-codary-red transition-all shadow-sm hover:shadow-lg hover:-translate-y-1">
+            <a 
+              href="#contact" 
+              className="w-full sm:w-auto px-10 md:px-12 py-4 md:py-5 glass-card text-codary-black dark:text-red-50 border border-white/10 rounded-full font-black text-lg md:text-xl hover:border-codary-red hover:text-codary-red transition-all hover:-translate-y-2 active:scale-95 shadow-xl"
+            >
               Únete al Club
             </a>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto border-t border-gray-200 dark:border-gray-800 pt-8"
-          >
-            {[
-              { label: 'Miembros', value: '8' },
-              { label: 'Proyectos', value: '5' },
-              { label: 'Eventos', value: 'Semanal' },
-              { label: 'Comunidad', value: 'Activa' },
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl font-bold text-codary-black dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-red-400 dark:to-codary-red mb-1">{stat.value}</div>
-                <div className="text-md text-gray-500 dark:text-red-100/90 uppercase tracking-wider font-bold">{stat.label}</div>
-              </div>
-            ))}
           </motion.div>
         </motion.div>
       </div>

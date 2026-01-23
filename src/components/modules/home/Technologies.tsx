@@ -14,59 +14,74 @@ import JsIcon from '../../../assets/icons/javascript.svg?react';
 import HtmlIcon from '../../../assets/icons/html.svg?react';
 import CssIcon from '../../../assets/icons/css.svg?react';
 
-
 const technologies = [
   { name: 'React', icon: ReactIcon, color: 'text-blue-400' },
   { name: 'Node.js', icon: NodejsIcon, color: 'text-green-500' },
   { name: 'PostgreSQL', icon: PostgresqlIcon, color: 'text-blue-300' },
   { name: 'MySQL', icon: MysqlIcon, color: 'text-orange-400' },
   { name: 'Docker', icon: DockerIcon, color: 'text-blue-500' },
-  { name: 'GitHub', icon: GithubIcon, color: 'text-gray-800' },
+  { name: 'GitHub', icon: GithubIcon, color: 'text-gray-400' },
   { name: 'Java', icon: JavaIcon, color: 'text-red-500' },
   { name: 'Spring Boot', icon: SpringbootIcon, color: 'text-green-600' },
   { name: 'Vue.js', icon: VuejsIcon, color: 'text-green-400' },
   { name: 'Tailwind', icon: TailwindIcon, color: 'text-cyan-400' },
-  { name: 'Vercel', icon: VercelIcon, color: 'text-black' },
+  { name: 'Vercel', icon: VercelIcon, color: 'text-white' },
   { name: 'JavaScript', icon: JsIcon, color: 'text-yellow-400' },
-  { name: 'HTML', icon: HtmlIcon, color: 'text-orange-500' },
-  { name: 'CSS', icon: CssIcon, color: 'text-blue-500' },
+  { name: 'HTML5', icon: HtmlIcon, color: 'text-orange-500' },
+  { name: 'CSS3', icon: CssIcon, color: 'text-blue-500' },
 ];
 
 export const Technologies = () => {
   return (
-    <section className="py-20 bg-transparent transition-colors duration-300 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center">
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-codary-black dark:text-white mb-4"
+    <section className="py-10 bg-transparent overflow-hidden relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 text-center">
+        <motion.div
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
         >
-          Nuestro Stack Tecnológico
-        </motion.h2>
-        <p className="text-lg text-gray-600 dark:text-gray-400">Dominamos las herramientas que mueven el mundo.</p>
+          <h2 className="text-5xl md:text-6xl font-black text-codary-black dark:text-white mb-6 tracking-tight">
+            Nuestro stack <span className="text-codary-red">Tecnológico</span>
+          </h2>
+          <p className="text-lg text-gray-500 dark:text-gray-400 font-light tracking-wide">
+            Elegimos solo las mejores herramientas para forjar el futuro.
+          </p>
+        </motion.div>
       </div>
 
-      <div className="relative flex overflow-x-hidden group">
-        <div className="animate-marquee whitespace-nowrap flex py-4">
+      <div className="relative flex overflow-x-hidden">
+        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white dark:from-codary-darker to-transparent z-10" />
+        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white dark:from-codary-darker to-transparent z-10" />
+
+        <div className="animate-marquee whitespace-nowrap flex py-12 items-center">
           {[...technologies, ...technologies].map((tech, index) => (
-            <div key={`${tech.name}-${index}`} className="flex flex-col items-center space-y-4 px-8">
-              <div className="w-20 h-20 bg-white dark:bg-gray-800 rounded-2xl shadow-md flex items-center justify-center hover:scale-110 transition-transform duration-300 border border-gray-100 dark:border-gray-700">
-                <tech.icon className={`h-10 w-10 ${tech.color}`} />
+            <motion.div 
+              key={`${tech.name}-${index}`} 
+              className="px-12 flex flex-col items-center group cursor-default"
+            >
+              <div className="w-24 h-24 glass-card bg-white/40 dark:bg-white/5 rounded-[2rem] flex items-center justify-center group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 shadow-xl group-hover:shadow-codary-red/20 border border-white/20 dark:border-white/5">
+                <tech.icon className={`h-12 w-12 ${tech.color} filter drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]`} />
               </div>
-              <span className="font-semibold text-gray-600 dark:text-gray-300">{tech.name}</span>
-            </div>
+              <span className="mt-6 text-md font-bold text-codary-black dark:text-white group-hover:text-codary-red transition-colors duration-300">
+                {tech.name}
+              </span>
+            </motion.div>
           ))}
         </div>
         
-        <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex py-4">
-           {[...technologies, ...technologies].map((tech, index) => (
-            <div key={`${tech.name}-duplicate-${index}`} className="flex flex-col items-center space-y-4 px-8">
-              <div className="w-20 h-20 bg-white dark:bg-gray-800 rounded-2xl shadow-md flex items-center justify-center hover:scale-110 transition-transform duration-300 border border-gray-100 dark:border-gray-700">
-                <tech.icon className={`h-10 w-10 ${tech.color}`} />
+        <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex py-12 items-center">
+          {[...technologies, ...technologies].map((tech, index) => (
+            <motion.div 
+              key={`${tech.name}-dup-${index}`} 
+              className="px-12 flex flex-col items-center group cursor-default"
+            >
+              <div className="w-24 h-24 glass-card bg-white/40 dark:bg-white/5 rounded-[2rem] flex items-center justify-center group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 shadow-xl group-hover:shadow-codary-red/20 border border-white/20 dark:border-white/5">
+                <tech.icon className={`h-12 w-12 ${tech.color} filter drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]`} />
               </div>
-              <span className="font-semibold text-gray-600 dark:text-gray-300">{tech.name}</span>
-            </div>
+              <span className="mt-6 text-md font-bold text-codary-black dark:text-white group-hover:text-codary-red transition-colors duration-300">
+                {tech.name}
+              </span>
+            </motion.div>
           ))}
         </div>
       </div>

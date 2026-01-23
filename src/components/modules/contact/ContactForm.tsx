@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
@@ -30,95 +31,116 @@ export const ContactForm = () => {
   };
 
   return (
-    <section className="bg-transparent transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-codary-black dark:text-white mb-4">Contáctanos</h1>
-            <p className="text-lg text-gray-600 dark:text-gray-400">
-              ¿Tienes alguna duda o quieres unirte? Escríbenos.
-            </p>
-          </div>
-
-          <form 
-            ref={formRef}
-            onSubmit={handleSubmit}
-            className="space-y-6 bg-white dark:bg-codary-black p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-800 transition-colors duration-300"
+    <section className="py-20 pt-10 bg-transparent transition-colors duration-300 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-3xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
           >
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Nombre Completo
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="user_name"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-codary-dark text-codary-black dark:text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all"
-                placeholder="Tu nombre"
-                required
-              />
-            </div>
+            <h2 className="text-5xl md:text-6xl font-black text-codary-black dark:text-white mb-6 tracking-tighter">
+              ¿Listo para subir al <span className="text-codary-red">Siguiente Nivel</span>?
+            </h2>
+            <p className="text-xl text-gray-500 dark:text-gray-400 font-light leading-relaxed">
+              Estamos a una línea de código de distancia.
+            </p>
+          </motion.div>
 
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Correo Electrónico
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="user_email"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-codary-dark text-codary-black dark:text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all"
-                placeholder="tucorreo@ejemplo.com"
-                required
-              />
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Mensaje
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-codary-dark text-codary-black dark:text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all"
-                placeholder="Cuéntanos cómo podemos ayudarte..."
-                required
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={status === 'loading'}
-              className={`w-full font-bold py-4 rounded-lg transition-all flex items-center justify-center space-x-2 shadow-lg ${
-                status === 'success' ? 'bg-green-500 hover:bg-green-600' : 
-                status === 'error' ? 'bg-red-500 hover:bg-red-600' : 
-                'bg-codary-red hover:bg-red-700'
-              } text-white disabled:opacity-70 disabled:cursor-not-allowed`}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="glass-card p-10 md:p-14 rounded-[3rem] border-white/10 relative overflow-hidden"
+          >
+            <form 
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="space-y-8 relative z-10"
             >
-              {status === 'loading' ? (
-                <>
-                  <Loader2 className="h-5 w-5 animate-spin" />
-                  <span>Enviando...</span>
-                </>
-              ) : status === 'success' ? (
-                <>
-                  <CheckCircle2 className="h-5 w-5" />
-                  <span>¡Mensaje Enviado!</span>
-                </>
-              ) : status === 'error' ? (
-                <>
-                  <AlertCircle className="h-5 w-5" />
-                  <span>Error al enviar</span>
-                </>
-              ) : (
-                <>
-                  <span>Enviar Mensaje</span>
-                  <Send className="h-5 w-5" />
-                </>
-              )}
-            </button>
-          </form>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-2">
+                  <label htmlFor="name" className="text-xs font-black uppercase tracking-widest text-gray-400 dark:text-gray-300 ml-1">
+                    Tu Nombre
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="user_name"
+                    className="w-full px-6 py-4 rounded-2xl border border-white/10 bg-white/5 dark:bg-black/20 text-codary-black dark:text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-gray-400/50"
+                    placeholder="Ej. Linus Torvalds"
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label htmlFor="email" className="text-xs font-black uppercase tracking-widest text-gray-400 dark:text-gray-300 ml-1">
+                    Coordinadas (Email)
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="user_email"
+                    className="w-full px-6 py-4 rounded-2xl border border-white/10 bg-white/5 dark:bg-black/20 text-codary-black dark:text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-gray-400/50"
+                    placeholder="linustv@gmail.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <label htmlFor="message" className="text-xs font-black uppercase tracking-widest text-gray-300 dark:text-gray-300 ml-1">
+                  Tu Mensaje
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  className="w-full px-6 py-4 rounded-2xl border border-white/10 bg-white/5 dark:bg-black/20 text-codary-black dark:text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-gray-400/50 resize-none"
+                  placeholder="Hablemos sobre innovación..."
+                  required
+                />
+              </div>
+
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                type="submit"
+                disabled={status === 'loading'}
+                className={`w-full font-black uppercase tracking-[0.2em] py-5 rounded-2xl transition-all flex items-center justify-center space-x-3 shadow-2xl ${
+                  status === 'success' ? 'bg-green-500' : 
+                  status === 'error' ? 'bg-red-500' : 
+                  'bg-codary-red hover:bg-red-700'
+                } text-white disabled:opacity-70 disabled:cursor-not-allowed overflow-hidden relative group`}
+              >
+                {status === 'loading' ? (
+                  <>
+                    <Loader2 className="h-6 w-6 animate-spin" />
+                    <span>Procesando...</span>
+                  </>
+                ) : status === 'success' ? (
+                  <>
+                    <CheckCircle2 className="h-6 w-6" />
+                    <span>¡Enviado con Éxito!</span>
+                  </>
+                ) : status === 'error' ? (
+                  <>
+                    <AlertCircle className="h-6 w-6" />
+                    <span>Error en el Envío</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Enviar Mensaje</span>
+                    <Send className="h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  </>
+                )}
+              </motion.button>
+            </form>
+
+            {/* Background accent */}
+            <div className="absolute -top-24 -right-24 w-48 h-48 bg-codary-red/5 rounded-full blur-[100px] pointer-events-none" />
+          </motion.div>
         </div>
       </div>
     </section>
