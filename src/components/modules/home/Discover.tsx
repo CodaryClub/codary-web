@@ -11,10 +11,10 @@ export const Discover = () => {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-5xl md:text-6xl font-black text-codary-black dark:text-white mb-8 tracking-tighter">
+          <h2 className="text-5xl md:text-6xl font-black text-white mb-8 tracking-tighter">
             Descubre <span className="text-codary-red">Codary</span>
           </h2>
-          <p className="text-xl text-gray-500 dark:text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
             Nacimos para desafiar lo convencional. Somos el punto de encuentro entre la curiosidad técnica y la ejecución magistral.
           </p>
         </motion.div>
@@ -48,8 +48,8 @@ export const Discover = () => {
               <div className={`w-16 h-16 ${item.glow} rounded-2xl flex items-center justify-center mb-8 border border-white/5 group-hover:scale-110 transition-transform duration-500`}>
                 <item.icon className={`h-8 w-8 ${item.color}`} />
               </div>
-              <h3 className="text-3xl font-black mb-6 text-codary-black dark:text-white tracking-tight uppercase">{item.title}</h3>
-              <p className="text-lg text-gray-500 dark:text-gray-400 font-light leading-relaxed mb-6">
+              <h3 className="text-3xl font-black mb-6 text-white tracking-tight">{item.title}</h3>
+              <p className="text-lg text-gray-400 font-light leading-relaxed mb-6">
                 {item.description}
               </p>
               <div className={`absolute -bottom-10 -right-10 w-40 h-40 ${item.glow} blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000`} />

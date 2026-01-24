@@ -54,13 +54,13 @@ export const Location = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-sm font-black uppercase tracking-[0.2em] text-codary-red dark:text-codary-red mb-4 block">
+              <span className="text-sm font-black uppercase tracking-[0.2em] text-codary-red mb-4 block">
                 Presencia Física
               </span>
-              <h2 className="text-5xl md:text-6xl font-black text-codary-black dark:text-white mb-6 tracking-tight">
+              <h2 className="text-5xl md:text-6xl font-black text-white mb-6 tracking-tight">
                 Nuestra <span className="text-codary-red">Ubicación</span>
               </h2>
-              <p className="text-xl text-gray-500 dark:text-gray-400 font-light leading-relaxed">
+              <p className="text-xl text-gray-400 font-light leading-relaxed">
                 El epicentro donde las ideas cobran vida. Únete a nuestras sesiones semanales en el corazón de Cuenca.
               </p>
             </motion.div>
@@ -88,10 +88,10 @@ export const Location = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xs font-black uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-1">
+                    <h3 className="text-xs font-black uppercase tracking-widest text-gray-500 mb-1">
                       {info.label}
                     </h3>
-                    <p className="text-lg font-bold text-gray-800 dark:text-gray-300">
+                    <p className="text-lg font-bold text-gray-300">
                       {info.value}
                     </p>
                   </div>
@@ -109,7 +109,7 @@ export const Location = () => {
             <div className="w-full h-full rounded-[2.5rem] overflow-hidden border border-white/5">
               <Suspense
                 fallback={
-                  <div className="w-full h-full flex items-center justify-center bg-white/5 dark:bg-black/20">
+                  <div className="w-full h-full flex items-center justify-center bg-black/20">
                     <div className="flex flex-col items-center space-y-4">
                       <Loader2 className="h-10 w-10 animate-spin text-codary-red" />
                       <span className="text-xs font-black uppercase tracking-widest text-gray-500">Cargando Mapa...</span>

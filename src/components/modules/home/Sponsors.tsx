@@ -19,10 +19,10 @@ export const Sponsors = () => {
            viewport={{ once: true }}
            className="text-center mb-16"
         >
-          <span className="text-lg font-black uppercase tracking-[0.2em] text-codary-red dark:text-codary-red mb-4 block">
+          <span className="text-lg font-black uppercase tracking-[0.2em] text-codary-red mb-4 block">
             Alianzas Estratégicas
           </span>
-          <h3 className="text-3xl md:text-4xl font-black text-codary-black dark:text-white mb-2 tracking-tight">
+          <h3 className="text-3xl md:text-4xl font-black text-white mb-2 tracking-tight">
             Respaldados por Líderes de la Industria
           </h3>
         </motion.div>
@@ -52,7 +52,7 @@ export const Sponsors = () => {
                 <span className="block text-xs font-black text-codary-red uppercase tracking-widest mb-1">
                   {sponsor.type}
                 </span>
-                <span className="text-xl font-bold text-gray-800 dark:text-gray-200">
+                <span className="text-xl font-bold text-gray-200">
                   {sponsor.name}
                 </span>
               </div>

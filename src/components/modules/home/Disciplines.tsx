@@ -56,10 +56,10 @@ export const Disciplines = () => {
           viewport={{ once: true }}
           className="text-center mb-24"
         >
-          <h2 className="text-5xl md:text-6xl font-black text-codary-black dark:text-white mb-6 tracking-tight">
+          <h2 className="text-5xl md:text-6xl font-black text-white mb-6 tracking-tight">
             Nuestros <span className="text-codary-red">Pilares</span>
           </h2>
-          <p className="text-xl text-gray-500 dark:text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
             Dominamos las tecnologías que están redefiniendo el mundo digital, impulsando proyectos con visión de futuro.
           </p>
         </motion.div>
@@ -94,10 +94,10 @@ export const Disciplines = () => {
                   <item.icon className="h-8 w-8" />
                 </div>
                 
-                <h3 className="text-2xl font-bold mb-4 text-codary-black dark:text-white group-hover:text-white transition-colors">
+                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-white transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-gray-500 dark:text-gray-400 leading-relaxed font-light">
+                <p className="text-gray-400 leading-relaxed font-light">
                   {item.description}
                 </p>
               </div>

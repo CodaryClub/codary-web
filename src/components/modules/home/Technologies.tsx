@@ -40,10 +40,10 @@ export const Technologies = () => {
            whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true }}
         >
-          <h2 className="text-5xl md:text-6xl font-black text-codary-black dark:text-white mb-6 tracking-tight">
+          <h2 className="text-5xl md:text-6xl font-black text-white mb-6 tracking-tight">
             Nuestro stack <span className="text-codary-red">Tecnológico</span>
           </h2>
-          <p className="text-lg text-gray-500 dark:text-gray-400 font-light tracking-wide">
+          <p className="text-lg text-gray-400 font-light tracking-wide">
             Elegimos solo las mejores herramientas para forjar el futuro.
           </p>
         </motion.div>
@@ -56,10 +56,10 @@ export const Technologies = () => {
               key={`${tech.name}-${index}`} 
               className="px-12 flex flex-col items-center group cursor-default"
             >
-              <div className="w-24 h-24 glass-card bg-white/40 dark:bg-white/5 rounded-[2rem] flex items-center justify-center group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 shadow-xl group-hover:shadow-codary-red/20 border border-white/20 dark:border-white/5">
+              <div className="w-24 h-24 glass-card bg-white/5 rounded-[2rem] flex items-center justify-center group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 shadow-xl group-hover:shadow-codary-red/20 border border-white/5">
                 <tech.icon className={`h-12 w-12 ${tech.color} filter drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]`} />
               </div>
-              <span className="mt-6 text-md font-bold text-codary-black dark:text-white group-hover:text-codary-red transition-colors duration-300">
+              <span className="mt-6 text-md font-bold text-white group-hover:text-codary-red transition-colors duration-300">
                 {tech.name}
               </span>
             </motion.div>
@@ -72,10 +72,10 @@ export const Technologies = () => {
               key={`${tech.name}-dup-${index}`} 
               className="px-12 flex flex-col items-center group cursor-default"
             >
-              <div className="w-24 h-24 glass-card bg-white/40 dark:bg-white/5 rounded-[2rem] flex items-center justify-center group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 shadow-xl group-hover:shadow-codary-red/20 border border-white/20 dark:border-white/5">
+              <div className="w-24 h-24 glass-card bg-white/5 rounded-[2rem] flex items-center justify-center group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 shadow-xl group-hover:shadow-codary-red/20 border border-white/5">
                 <tech.icon className={`h-12 w-12 ${tech.color} filter drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]`} />
               </div>
-              <span className="mt-6 text-md font-bold text-codary-black dark:text-white group-hover:text-codary-red transition-colors duration-300">
+              <span className="mt-6 text-md font-bold text-white group-hover:text-codary-red transition-colors duration-300">
                 {tech.name}
               </span>
             </motion.div>

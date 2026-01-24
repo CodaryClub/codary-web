@@ -1,10 +1,13 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-}
-
-html.dark {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   background-color: #0A0A0A;
+  color-scheme: dark;
 }
 
 @media (min-width: 1024px) {
@@ -25,7 +28,13 @@ html.dark {
 
 @layer base {
   body {
-    @apply bg-white dark:bg-codary-darker text-codary-black dark:text-white font-sans antialiased;
+    @apply bg-codary-darker text-white font-sans antialiased;
+    min-height: 100%;
+    min-height: -webkit-fill-available;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
   }
 }
 
@@ -34,7 +43,7 @@ html.dark {
     text-shadow: 0 0 15px rgba(230, 57, 70, 0.4);
   }
   .glass-card {
-    @apply backdrop-blur-xl bg-white/60 dark:bg-black/40 border border-white/20 dark:border-white/10 shadow-2xl;
+    @apply backdrop-blur-xl bg-black/40 border border-white/10 shadow-2xl;
   }
   .scrollbar-hide::-webkit-scrollbar {
     display: none;

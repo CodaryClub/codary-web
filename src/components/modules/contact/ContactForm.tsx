@@ -40,10 +40,10 @@ export const ContactForm = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-6xl font-black text-codary-black dark:text-white mb-6 tracking-tighter">
+            <h2 className="text-5xl md:text-6xl font-black text-white mb-6 tracking-tighter">
               ¿Listo para subir al <span className="text-codary-red">Siguiente Nivel</span>?
             </h2>
-            <p className="text-xl text-gray-500 dark:text-gray-400 font-light leading-relaxed">
+            <p className="text-xl text-gray-400 font-light leading-relaxed">
               Estamos a una línea de código de distancia.
             </p>
           </motion.div>
@@ -61,28 +61,28 @@ export const ContactForm = () => {
             >
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-xs font-black uppercase tracking-widest text-gray-400 dark:text-gray-300 ml-1">
+                  <label htmlFor="name" className="text-xs font-black uppercase tracking-widest text-gray-300 ml-1">
                     Tu Nombre
                   </label>
                   <input
                     type="text"
                     id="name"
                     name="user_name"
-                    className="w-full px-6 py-4 rounded-2xl border-2 border-gray/60 dark:border-gray-500/40 bg-white/5 dark:bg-black/20 text-codary-black dark:text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-gray-400/50"
+                    className="w-full px-6 py-4 rounded-2xl border-2 border-gray-500/40 bg-black/20 text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-gray-400/50"
                     placeholder="Ej. Linus Torvalds"
                     required
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-xs font-black uppercase tracking-widest text-gray-400 dark:text-gray-300 ml-1">
+                  <label htmlFor="email" className="text-xs font-black uppercase tracking-widest text-gray-300 ml-1">
                     Coordinadas (Email)
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="user_email"
-                    className="w-full px-6 py-4 rounded-2xl border-2 border-gray/60 dark:border-gray-500/40 bg-white/5 dark:bg-black/20 text-codary-black dark:text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-gray-400/50"
+                    className="w-full px-6 py-4 rounded-2xl border-2 border-gray-500/40 bg-black/20 text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-gray-400/50"
                     placeholder="linustv@gmail.com"
                     required
                   />
@@ -90,14 +90,14 @@ export const ContactForm = () => {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="message" className="text-xs font-black uppercase tracking-widest text-gray-400 dark:text-gray-300 ml-1">
+                <label htmlFor="message" className="text-xs font-black uppercase tracking-widest text-gray-300 ml-1">
                   Tu Mensaje
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   rows={5}
-                  className="w-full px-6 py-4 rounded-2xl border-2 border-gray/60 dark:border-gray-500/40 bg-white/5 dark:bg-black/20 text-codary-black dark:text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-gray-400/50 resize-none"
+                  className="w-full px-6 py-4 rounded-2xl border-2 border-gray-500/40 bg-black/20 text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-gray-400/50 resize-none"
                   placeholder="Hablemos sobre innovación..."
                   required
                 />

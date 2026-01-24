@@ -8,7 +8,7 @@ export const Hero = () => {
     <section className="relative min-h-[100svh] pt-32 md:pt-32 pb-20 overflow-hidden bg-transparent transition-colors duration-300">
       <div className="absolute inset-0 -z-30 pointer-events-none overflow-hidden">
         <div 
-          className="absolute inset-0 opacity-[0.10] dark:opacity-[0.15] transition-opacity duration-300"
+          className="absolute inset-0 opacity-[0.15] transition-opacity duration-300"
           style={{ 
             backgroundImage: `url(${matrixGif})`,
             backgroundSize: 'cover',
@@ -51,7 +51,7 @@ export const Hero = () => {
               transition={{ delay: 0.2, duration: 0.8 }}
               className="text-6xl md:text-9xl font-black tracking-tighter"
             >
-              <span className="bg-clip-text text-transparent bg-gradient-to-b from-codary-black via-codary-black to-codary-red dark:from-white dark:via-white dark:to-codary-red filter drop-shadow-sm">
+              <span className="bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-codary-red filter drop-shadow-sm">
                 Codary
               </span>
             </motion.h1>
@@ -60,9 +60,9 @@ export const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-xl md:text-4xl text-gray-600 dark:text-red-100/90 max-w-4xl mx-auto font-light leading-tight tracking-tight px-6"
+              className="text-xl md:text-4xl text-red-100/90 max-w-4xl mx-auto font-light leading-tight tracking-tight px-6"
             >
-              <span className="text-codary-black font-semibold dark:text-gray-200"> Innovación en código,</span> <span className="text-codary-red font-bold text-glow">comunidad en acción</span>
+              <span className="font-semibold text-gray-200"> Innovación en código,</span> <span className="text-codary-red font-bold text-glow">comunidad en acción</span>
             </motion.p>
           </div>
           
@@ -81,7 +81,7 @@ export const Hero = () => {
             </a>
             <a 
               href="#contact" 
-              className="w-full sm:w-auto px-10 md:px-12 py-4 md:py-5 glass-card text-codary-black dark:text-red-50 border border-white/10 rounded-full font-black text-lg md:text-xl hover:border-codary-red hover:text-codary-red transition-all hover:-translate-y-2 active:scale-95 shadow-xl"
+              className="w-full sm:w-auto px-10 md:px-12 py-4 md:py-5 glass-card text-red-50 border border-white/10 rounded-full font-black text-lg md:text-xl hover:border-codary-red hover:text-codary-red transition-all hover:-translate-y-2 active:scale-95 shadow-xl"
             >
               Únete al Club
             </a>

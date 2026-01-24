@@ -41,11 +41,11 @@ export const WhyChooseUs = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-6xl font-black text-codary-black dark:text-white mb-8 tracking-tighter"
+            className="text-5xl md:text-6xl font-black text-white mb-8 tracking-tighter"
           >
             ¿Por qué <span className="text-codary-red">Codary</span>?
           </motion.h2>
-          <p className="text-xl text-gray-500 dark:text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
             Más que un club, somos el acelerador de partículas para tu carrera en la ingeniería de software.
           </p>
         </div>
@@ -68,10 +68,10 @@ export const WhyChooseUs = () => {
                 <feature.icon className="h-8 w-8" />
               </div>
               
-              <h3 className="text-2xl font-bold mb-4 text-codary-black dark:text-white tracking-tight group-hover:text-white transition-colors">
+              <h3 className="text-2xl font-bold mb-4 text-white tracking-tight group-hover:text-white transition-colors">
                 {feature.title}
               </h3>
-              <p className="text-gray-500 dark:text-gray-400 leading-relaxed font-light">
+              <p className="text-gray-400 leading-relaxed font-light">
                 {feature.description}
               </p>
 

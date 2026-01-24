@@ -103,13 +103,13 @@ const TeamMember = ({ member, index }: { member: any, index: number }) => (
     </div>
     
     <div className="text-center">
-      <h3 className="text-xl font-black text-codary-black dark:text-white mb-2 tracking-tight group-hover:text-codary-red transition-colors">
+      <h3 className="text-xl font-black text-white mb-2 tracking-tight group-hover:text-codary-red transition-colors">
         {member.name}
       </h3>
-      <p className="text-sm font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.2em] mb-4">
+      <p className="text-sm font-black text-gray-500 uppercase tracking-[0.2em] mb-4">
         {member.role}
       </p>
-      <div className="w-8 h-1 bg-gray-200 dark:bg-white/10 mx-auto group-hover:w-16 group-hover:bg-codary-red transition-all duration-500" />
+      <div className="w-8 h-1 bg-white/10 mx-auto group-hover:w-16 group-hover:bg-codary-red transition-all duration-500" />
     </div>
   </motion.div>
 );
@@ -124,10 +124,10 @@ export const Team = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
           >
-             <h2 className="text-5xl md:text-6xl font-black text-codary-black dark:text-white mb-8 tracking-tighter">
+             <h2 className="text-5xl md:text-6xl font-black text-white mb-8 tracking-tighter">
               Nuestro <span className="text-codary-red">Equipo</span>
             </h2>
-            <p className="text-xl text-gray-500 dark:text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
               Un colectivo de visionarios dedicados a romper las barreras de lo convencional a través del código.
             </p>
           </motion.div>
@@ -147,10 +147,10 @@ export const Team = () => {
 const CategoryGroup = ({ title, members, centered = false }: { title: string, members: any[], centered?: boolean }) => (
   <div className="relative">
     <div className="flex items-center mb-16">
-      <h3 className="text-base md:text-lg font-black uppercase tracking-[0.2em] md:tracking-[0.4em] text-codary-red dark:text-codary-red leading-tight">
+      <h3 className="text-base md:text-lg font-black uppercase tracking-[0.2em] md:tracking-[0.4em] text-codary-red leading-tight">
         {title}
       </h3>
-      <div className="h-px bg-gradient-to-r from-gray-200 dark:from-white/10 to-transparent flex-1 ml-8" />
+      <div className="h-px bg-gradient-to-r from-white/10 to-transparent flex-1 ml-8" />
     </div>
     <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 ${centered ? 'lg:flex lg:justify-center' : ''}`}>
       {members.map((member, index) => (

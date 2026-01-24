@@ -42,16 +42,16 @@ export const History = () => {
           viewport={{ once: true }}
           className="text-center mb-32"
         >
-          <h2 className="text-5xl md:text-6xl font-black text-codary-black dark:text-white mb-8 tracking-tighter">
+          <h2 className="text-5xl md:text-6xl font-black text-white mb-8 tracking-tighter">
             Nuestra <span className="text-codary-red">Historia</span>
           </h2>
-          <p className="text-xl text-gray-500 dark:text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
             Un viaje desde la curiosidad pura hasta la creación de un ecosistema tecnológico sin fronteras.
           </p>
         </motion.div>
 
         <div className="relative">
-          <div className="absolute left-[20px] md:left-1/2 transform md:-translate-x-1/2 w-[2px] h-full bg-gray-100 dark:bg-white/5" />
+          <div className="absolute left-[20px] md:left-1/2 transform md:-translate-x-1/2 w-[2px] h-full bg-white/5" />
           <motion.div 
             style={{ scaleY, originY: 0 }}
             className="absolute left-[20px] md:left-1/2 transform md:-translate-x-1/2 w-[2px] h-full bg-gradient-to-b from-codary-red via-red-400 to-transparent z-10" 
@@ -81,10 +81,10 @@ export const History = () => {
                       </span>
                     </div>
                     
-                    <h3 className="text-3xl font-black text-codary-black dark:text-white mb-4 tracking-tight">
+                    <h3 className="text-3xl font-black text-white mb-4 tracking-tight">
                       {item.title}
                     </h3>
-                    <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed font-light">
+                    <p className="text-lg text-gray-400 leading-relaxed font-light">
                       {item.description}
                     </p>
 
@@ -99,7 +99,7 @@ export const History = () => {
                     viewport={{ once: true }}
                     className="relative z-20"
                    >
-                     <div className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-white dark:bg-codary-darker border-4 border-codary-red shadow-[0_0_20px_rgba(230,57,70,0.5)]" />
+                     <div className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-codary-darker border-4 border-codary-red shadow-[0_0_20px_rgba(230,57,70,0.5)]" />
                    </motion.div>
                 </div>
 
