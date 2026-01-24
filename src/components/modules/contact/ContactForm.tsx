@@ -35,10 +35,11 @@ export const ContactForm = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+            viewport={{ once: true, margin: "-20px" }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16 will-change-transform"
           >
             <h2 className="text-5xl md:text-6xl font-black text-white mb-6 tracking-tighter">
               ¿Listo para subir al <span className="text-codary-red">Siguiente Nivel</span>?
@@ -49,10 +50,11 @@ export const ContactForm = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="glass-card p-10 md:p-14 rounded-[3rem] border-white/10 relative overflow-hidden"
+            viewport={{ once: true, margin: "-20px" }}
+            transition={{ type: "spring", stiffness: 100, damping: 20 }}
+            className="glass-card p-10 md:p-14 rounded-[3rem] border-white/10 relative overflow-hidden will-change-transform"
           >
             <form 
               ref={formRef}
@@ -104,7 +106,10 @@ export const ContactForm = () => {
               </div>
 
               <motion.button
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ 
+                  y: -4,
+                  transition: { type: "spring", stiffness: 400, damping: 25 }
+                }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
                 disabled={status === 'loading'}
@@ -112,7 +117,7 @@ export const ContactForm = () => {
                   status === 'success' ? 'bg-green-500' : 
                   status === 'error' ? 'bg-red-500' : 
                   'bg-codary-red hover:bg-red-700'
-                } text-white disabled:opacity-70 disabled:cursor-not-allowed overflow-hidden relative group`}
+                } text-white disabled:opacity-70 disabled:cursor-not-allowed overflow-hidden relative group will-change-transform`}
               >
                 {status === 'loading' ? (
                   <>
@@ -139,7 +144,7 @@ export const ContactForm = () => {
             </form>
 
             {/* Background accent */}
-            <div className="absolute -top-24 -right-24 w-48 h-48 bg-codary-red/5 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute -top-24 -right-24 w-48 h-48 bg-codary-red/5 rounded-full blur-[80px] pointer-events-none will-change-gpu" />
           </motion.div>
         </div>
       </div>

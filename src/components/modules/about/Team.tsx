@@ -60,32 +60,37 @@ const team = {
 
 const TeamMember = ({ member, index }: { member: any, index: number }) => (
   <motion.div 
-    initial={{ opacity: 0, scale: 0.9, y: 20 }}
-    whileInView={{ opacity: 1, scale: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ delay: index * 0.1 }}
-    whileHover={{ 
-      y: -10,
-      rotateX: 2,
-      rotateY: -2,
-      transition: { duration: 0.3 }
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-50px" }}
+    transition={{ 
+      type: "spring",
+      stiffness: 100,
+      damping: 20,
+      delay: index * 0.1 
     }}
-    className="glass-card group relative p-10 rounded-3xl overflow-hidden cursor-pointer"
-    style={{ perspective: '1000px' }}
+    whileHover={{ 
+      y: -8,
+      transition: { type: "spring", stiffness: 400, damping: 25 }
+    }}
+    className="glass-card group relative p-10 rounded-3xl overflow-hidden cursor-pointer will-change-transform"
   >
     <div className="relative mb-8 flex justify-center">
-      <div className="absolute inset-0 bg-codary-red/20 blur-[40px] rounded-full scale-75 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      {/* Optimized glow - using a simpler gradient instead of heavy blur if possible, but keeping the vibe */}
+      <div className="absolute inset-0 bg-codary-red/20 blur-[30px] rounded-full scale-75 opacity-0 group-hover:opacity-100 transition-opacity duration-500 will-change-[opacity]" />
       
-      <div className="relative w-32 h-32 rounded-full overflow-hidden p-1 border-2 border-white/20 group-hover:border-codary-red transition-colors duration-500">
+      <div className="relative w-32 h-32 rounded-full overflow-hidden p-1 border-2 border-white/10 group-hover:border-codary-red transition-colors duration-500">
         <img 
           src={member.image} 
           alt={member.name} 
-          className="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition-all duration-700" 
+          className="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition-transform duration-700 group-hover:scale-110" 
+          loading="lazy"
         />
       </div>
 
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <motion.div 
+          initial={false}
           className="flex space-x-3 bg-white/10 backdrop-blur-md rounded-2xl p-2 border border-white/20 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 pointer-events-auto"
         >
           {member.socials?.github && (

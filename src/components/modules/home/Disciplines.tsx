@@ -68,33 +68,35 @@ export const Disciplines = () => {
           {disciplines.map((item, index) => (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ 
+                type: "spring",
+                stiffness: 100,
+                damping: 20,
+                delay: index * 0.1 
+              }}
               whileHover={{ 
                 y: -10,
-                rotateX: 2,
-                rotateY: -2,
-                transition: { duration: 0.3 }
+                transition: { type: "spring", stiffness: 400, damping: 25 }
               }}
-              className="glass-card group relative p-10 rounded-3xl overflow-hidden cursor-pointer"
-              style={{ perspective: '1000px' }}
+              className="glass-card group relative p-10 rounded-3xl overflow-hidden cursor-pointer will-change-transform"
             >
               <div 
-                className="absolute -top-20 -right-20 w-40 h-40 rounded-full blur-[80px] transition-opacity opacity-0 group-hover:opacity-100"
+                className="absolute -top-20 -right-20 w-40 h-40 rounded-full blur-[60px] transition-opacity opacity-0 group-hover:opacity-100 pointer-events-none will-change-[opacity]"
                 style={{ backgroundColor: item.color }}
               />
 
               <div className="relative z-10">
                 <div 
-                  className="w-16 h-16 rounded-2xl flex items-center justify-center mb-8 transition-all duration-500 group-hover:scale-110 group-hover:rotate-[10deg]"
+                  className="w-16 h-16 rounded-2xl flex items-center justify-center mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-[10deg] will-change-transform"
                   style={{ backgroundColor: `${item.color}20`, color: item.color }}
                 >
                   <item.icon className="h-8 w-8" />
                 </div>
                 
-                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-white transition-colors">
+                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-white transition-colors tracking-tight">
                   {item.title}
                 </h3>
                 <p className="text-gray-400 leading-relaxed font-light">
@@ -103,7 +105,7 @@ export const Disciplines = () => {
               </div>
 
               <div 
-                className="absolute bottom-0 left-0 h-1 w-0 group-hover:w-full transition-all duration-500"
+                className="absolute bottom-0 left-0 h-1 w-full scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
                 style={{ backgroundColor: item.color }}
               />
             </motion.div>

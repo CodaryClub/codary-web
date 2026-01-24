@@ -35,10 +35,12 @@ export const Technologies = () => {
   return (
     <section className="py-10 bg-transparent overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 text-center">
-        <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-20px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center mb-20 will-change-transform"
         >
           <h2 className="text-5xl md:text-6xl font-black text-white mb-6 tracking-tight">
             Nuestro stack <span className="text-codary-red">Tecnológico</span>
@@ -50,14 +52,14 @@ export const Technologies = () => {
       </div>
 
       <div className="relative flex overflow-x-hidden">
-        <div className="animate-marquee whitespace-nowrap flex py-12 items-center">
+        <div className="animate-marquee whitespace-nowrap flex py-12 items-center will-change-transform">
           {[...technologies, ...technologies].map((tech, index) => (
             <motion.div 
               key={`${tech.name}-${index}`} 
               className="px-12 flex flex-col items-center group cursor-default"
             >
-              <div className="w-24 h-24 glass-card bg-white/5 rounded-[2rem] flex items-center justify-center group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 shadow-xl group-hover:shadow-codary-red/20 border border-white/5">
-                <tech.icon className={`h-12 w-12 ${tech.color} filter drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]`} />
+              <div className="w-24 h-24 glass-card bg-white/5 rounded-[2rem] flex items-center justify-center group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500 shadow-xl group-hover:shadow-codary-red/20 border border-white/5 will-change-transform">
+                <tech.icon className={`h-12 w-12 ${tech.color} transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.4)]`} />
               </div>
               <span className="mt-6 text-md font-bold text-white group-hover:text-codary-red transition-colors duration-300">
                 {tech.name}
@@ -66,14 +68,14 @@ export const Technologies = () => {
           ))}
         </div>
         
-        <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex py-12 items-center">
+        <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex py-12 items-center will-change-transform">
           {[...technologies, ...technologies].map((tech, index) => (
             <motion.div 
               key={`${tech.name}-dup-${index}`} 
               className="px-12 flex flex-col items-center group cursor-default"
             >
-              <div className="w-24 h-24 glass-card bg-white/5 rounded-[2rem] flex items-center justify-center group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 shadow-xl group-hover:shadow-codary-red/20 border border-white/5">
-                <tech.icon className={`h-12 w-12 ${tech.color} filter drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]`} />
+              <div className="w-24 h-24 glass-card bg-white/5 rounded-[2rem] flex items-center justify-center group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500 shadow-xl group-hover:shadow-codary-red/20 border border-white/5 will-change-transform">
+                <tech.icon className={`h-12 w-12 ${tech.color} transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.4)]`} />
               </div>
               <span className="mt-6 text-md font-bold text-white group-hover:text-codary-red transition-colors duration-300">
                 {tech.name}

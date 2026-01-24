@@ -50,9 +50,11 @@ export const Location = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-12">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-20px" }}
+              transition={{ duration: 0.8 }}
+              className="will-change-transform"
             >
               <span className="text-sm font-black uppercase tracking-[0.2em] text-codary-red mb-4 block">
                 Presencia Física
@@ -68,22 +70,24 @@ export const Location = () => {
             <div className="grid sm:grid-cols-2 gap-6">
               {contactInfo.map((info, index) => (
                 <motion.div
-              key={info.label}
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ 
-                y: -10,
-                rotateX: 2,
-                rotateY: -2,
-                transition: { duration: 0.3 }
-              }}
-              className="glass-card group relative p-10 rounded-3xl overflow-hidden cursor-pointer"
-              style={{ perspective: '1000px' }}
-            >
+                  key={info.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-20px" }}
+                  transition={{ 
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 20,
+                    delay: index * 0.1 
+                  }}
+                  whileHover={{ 
+                    y: -8,
+                    transition: { type: "spring", stiffness: 400, damping: 25 }
+                  }}
+                  className="glass-card group relative p-10 rounded-3xl overflow-hidden cursor-pointer will-change-transform"
+                >
                   <div className="flex items-center justify-between mb-4">
-                    <div className={`p-3 rounded-2xl ${info.bg} ${info.color} group-hover:scale-110 transition-transform duration-500`}>
+                    <div className={`p-3 rounded-2xl ${info.bg} ${info.color} group-hover:scale-110 transition-transform duration-500 will-change-transform`}>
                       <info.icon size={24} />
                     </div>
                   </div>
@@ -101,10 +105,11 @@ export const Location = () => {
           </div>
 
           <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="h-[500px] glass-card rounded-[3rem] overflow-hidden shadow-2xl relative border-white/10 z-0 p-2"
+            viewport={{ once: true, margin: "-20px" }}
+            transition={{ type: "spring", stiffness: 100, damping: 20 }}
+            className="h-[500px] glass-card rounded-[3rem] overflow-hidden shadow-2xl relative border-white/10 z-0 p-2 will-change-transform"
           >
             <div className="w-full h-full rounded-[2.5rem] overflow-hidden border border-white/5">
               <Suspense
