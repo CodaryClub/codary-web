@@ -11,7 +11,7 @@ import { Discover } from '../components/modules/home/Discover';
 
 export const Home = () => {
   return (
-    <div className="relative min-h-screen bg-white dark:bg-codary-darker transition-colors duration-300">
+    <div className="relative min-h-[100svh] bg-white dark:bg-codary-darker transition-colors duration-300">
       <div 
         className="fixed inset-0 z-0 overflow-hidden pointer-events-none"
         style={{
