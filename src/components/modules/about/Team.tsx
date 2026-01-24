@@ -111,7 +111,7 @@ const TeamMember = ({ member, index }: { member: any, index: number }) => (
       <h3 className="text-xl font-black text-white mb-2 tracking-tight group-hover:text-codary-red transition-colors">
         {member.name}
       </h3>
-      <p className="text-sm font-black text-gray-500 uppercase tracking-[0.2em] mb-4">
+      <p className="text-md font-black text-gray-500 mb-4">
         {member.role}
       </p>
       <div className="w-8 h-1 bg-white/10 mx-auto group-hover:w-16 group-hover:bg-codary-red transition-all duration-500" />
@@ -152,7 +152,7 @@ export const Team = () => {
 const CategoryGroup = ({ title, members, centered = false }: { title: string, members: any[], centered?: boolean }) => (
   <div className="relative">
     <div className="flex items-center mb-16">
-      <h3 className="text-base md:text-lg font-black uppercase tracking-[0.2em] md:tracking-[0.4em] text-codary-red leading-tight">
+      <h3 className="text-2xl md:text-2xl font-black text-white leading-tight">
         {title}
       </h3>
       <div className="h-px bg-gradient-to-r from-white/10 to-transparent flex-1 ml-8" />

@@ -57,7 +57,7 @@ export const Sponsors = () => {
                 />
               </div>
               <div className="ml-8 border-l border-white/10 pl-8">
-                <span className="block text-xs font-black text-codary-red uppercase tracking-widest mb-1">
+                <span className="block text-md font-black text-codary-red mb-1">
                   {sponsor.type}
                 </span>
                 <span className="text-xl font-bold text-gray-200">

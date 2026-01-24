@@ -56,7 +56,7 @@ export const Location = () => {
               transition={{ duration: 0.8 }}
               className="will-change-transform"
             >
-              <span className="text-sm font-black uppercase tracking-[0.2em] text-codary-red mb-4 block">
+              <span className="text-2xl font-black text-codary-red mb-4 block">
                 Presencia Física
               </span>
               <h2 className="text-5xl md:text-6xl font-black text-white mb-6 tracking-tight">
@@ -92,10 +92,7 @@ export const Location = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xs font-black uppercase tracking-widest text-gray-500 mb-1">
-                      {info.label}
-                    </h3>
-                    <p className="text-lg font-bold text-gray-300">
+                    <p className="text-lg font-bold text-white">
                       {info.value}
                     </p>
                   </div>

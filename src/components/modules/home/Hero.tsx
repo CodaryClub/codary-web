@@ -96,7 +96,7 @@ export const Hero = () => {
             </a>
             <a 
               href="#contact" 
-              className="w-full sm:w-auto px-10 md:px-12 py-4 md:py-5 glass-card text-red-50 border border-white/10 rounded-full font-black text-lg md:text-xl hover:border-codary-red hover:text-codary-red transition-all hover:-translate-y-2 active:scale-95 shadow-xl will-change-transform"
+              className="w-full sm:w-auto px-10 md:px-12 py-4 md:py-5 glass-card text-white border border-white/10 rounded-full font-black text-lg md:text-xl hover:border-codary-red hover:text-codary-red transition-all hover:-translate-y-2 active:scale-95 shadow-xl will-change-transform"
             >
               Únete al Club
             </a>

@@ -1,124 +1,182 @@
-import { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight } from 'lucide-react';
-import { AnimatePresence, motion } from 'framer-motion';
-import codaryLogo from '../../assets/icons/codary.png';
+import { useState, useEffect } from "react";
+import { Menu, X, ArrowRight } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import codaryLogo from "../../assets/icons/codary.png";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    document.documentElement.classList.add('dark');
+    document.documentElement.classList.add("dark");
 
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      const scrolled = window.scrollY > 10;
+      if (scrolled !== isScrolled) {
+        setIsScrolled(scrolled);
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isScrolled]);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [isMenuOpen]);
 
   const scrollToSection = (id: string) => {
     setIsMenuOpen(false);
-    setTimeout(() => {
+    requestAnimationFrame(() => {
       const element = document.getElementById(id);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const offset = 80;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = element.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
       }
-    }, 100);
+    });
   };
 
   const navLinks = [
-    { name: 'Inicio', id: 'home' },
-    { name: 'Disciplinas', id: 'disciplines' },
-    { name: 'Historia', id: 'history' },
-    { name: 'Equipo', id: 'team' },
-    { name: 'Contacto', id: 'contact' },
+    { name: "Inicio", id: "home" },
+    { name: "Disciplinas", id: "disciplines" },
+    { name: "Historia", id: "history" },
+    { name: "Equipo", id: "team" },
+    { name: "Contacto", id: "contact" },
   ];
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${
-        isScrolled
-          ? 'py-4 bg-codary-darker/70 backdrop-blur-xl border-2 border-gray-500/10 shadow-2xl shadow-black/5' 
-          : 'py-8 bg-transparent border-b border-transparent'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="flex justify-between items-center">
-          <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }} className="flex items-center gap-4 group">
-            <div className="relative">
-              <div className="absolute inset-0 bg-codary-red/20 blur-xl rounded-full scale-0 group-hover:scale-150 transition-transform duration-500" />
-              <img src={codaryLogo} alt="Codary" className="h-10 w-10 md:h-12 md:w-12 relative z-10 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500" />
-            </div>
-            <span className="text-2xl font-bold text-white">
-              Codary
-            </span>
-          </a>
-          
-          <div className="hidden md:flex items-center gap-10">
-            {navLinks.map((link) => (
-              <a 
-                key={link.name}
-                href={`#${link.id}`}
-                onClick={(e) => { e.preventDefault(); scrollToSection(link.id); }} 
-                className="relative text-sm font-black uppercase tracking-[0.2em] text-white/80 hover:text-codary-red transition-colors group cursor-pointer"
-              >
-                {link.name}
-                <span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-codary-red transition-all duration-300 group-hover:w-full" />
-              </a>
-            ))}
-          </div>
-
-          <div className="md:hidden flex items-center gap-4">
-            <button 
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-3 text-white"
+    <>
+      <nav
+        className={`fixed top-0 left-0 w-full z-[210] transition-all duration-300 transform-gpu ${
+          isScrolled || isMenuOpen
+            ? "py-4 bg-codary-darker/90 backdrop-blur-xl border-b border-white/10 shadow-2xl"
+            : "py-6 bg-transparent border-b border-transparent"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="flex justify-between items-center">
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("home");
+              }}
+              className="flex items-center gap-3 md:gap-4 group outline-none relative z-[220]"
             >
-              {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
-            </button>
+              <div className="relative flex-shrink-0 w-10 md:w-12 h-10 md:h-12">
+                <div className="absolute inset-0 bg-codary-red/20 blur-xl rounded-full scale-0 group-hover:scale-125 transition-transform duration-500" />
+                <img
+                  src={codaryLogo}
+                  alt="Codary"
+                  className="w-full h-full object-contain relative z-10 transition-transform duration-500 group-hover:rotate-6"
+                />
+              </div>
+              <span className="text-xl md:text-2xl font-black text-white tracking-tighter">
+                Codary
+              </span>
+            </a>
+
+            <div className="hidden md:flex items-center gap-8 lg:gap-10">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={`#${link.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(link.id);
+                  }}
+                  className="relative text-[18px] lg:text-[18px] font-bold text-white hover:text-codary-red transition-colors group cursor-pointer"
+                >
+                  {link.name}
+                  <span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-codary-red transition-all duration-300 group-hover:w-full" />
+                </a>
+              ))}
+            </div>
+
+            <div className="md:hidden flex items-center relative z-[220]">
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label="Toggle Menu"
+                className="p-2 text-white hover:text-codary-red transition-colors touch-none"
+              >
+                {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </nav>
 
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            initial={{ x: '100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-[90] md:hidden bg-codary-darker flex flex-col justify-center px-12"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-[200] md:hidden bg-[#0A0A0A] flex flex-col px-10 pt-32 pb-10 overflow-y-auto"
           >
-            <div className="space-y-12">
-              {navLinks.map((link, i) => (
-                <motion.a 
-                  key={link.name}
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.1 + 0.3 }}
-                  href={`#${link.id}`}
-                  onClick={(e) => { e.preventDefault(); scrollToSection(link.id); }} 
-                  className="flex items-center justify-between group py-4 border-b border-white/5"
-                >
-                  <span className="text-4xl font-black uppercase tracking-tighter text-white group-hover:text-codary-red transition-colors">
-                    {link.name}
-                  </span>
-                  <ArrowRight className="text-codary-red opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-300" />
-                </motion.a>
-              ))}
+            <div className="absolute inset-0 pointer-events-none -z-10">
+              <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-codary-red/10 to-transparent opacity-30" />
+              <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-tl from-codary-red/5 to-transparent opacity-30" />
             </div>
-            
-            <div className="absolute bottom-12 left-12 right-12 flex justify-between items-center text-xs font-black uppercase tracking-[0.3em] text-gray-400">
-               <span>Codary Elite Club</span>
-               <div className="flex gap-4">
-                  <span className="w-8 h-px bg-codary-red" />
-                  <span className="text-codary-red">2026</span>
-               </div>
+
+            <div className="relative z-20 flex flex-col h-full min-h-fit">
+              <div className="space-y-4">
+                {navLinks.map((link, i) => (
+                  <motion.a
+                    key={link.name}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.05 + 0.1 }}
+                    href={`#${link.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(link.id);
+                    }}
+                    className="flex items-center justify-between group py-6 border-b border-white/5 active:bg-white/5 px-2"
+                  >
+                    <div className="flex items-center gap-6">
+                      <span className="w-2 h-[2px] bg-codary-red/50 self-center" />
+                      <span className="text-3xl font-black tracking-tighter text-white group-active:text-codary-red transition-colors">
+                        {link.name}
+                      </span>
+                    </div>
+                    <ArrowRight
+                      className="text-codary-red opacity-0 group-active:opacity-100 transition-all"
+                      size={24}
+                    />
+                  </motion.a>
+                ))}
+              </div>
+
+              <div className="mt-auto flex flex-col gap-6">
+                <a
+                  href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection("contact");
+                  }}
+                  className="w-full py-5 bg-codary-red text-white rounded-2xl font-black uppercase text-center shadow-2xl active:scale-95 transition-transform"
+                >
+                  Únete al Club
+                </a>
+              </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </>
   );
 };

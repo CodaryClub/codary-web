@@ -84,8 +84,8 @@ export const History = () => {
                       <div className="p-4 rounded-2xl bg-codary-red/10 text-codary-red group-hover:bg-codary-red group-hover:text-white transition-all duration-500">
                         <item.icon className="h-6 w-6" />
                       </div>
-                      <span className="text-sm font-black uppercase tracking-[0.2em] text-gray-400 group-hover:text-codary-red transition-colors">
-                        {item.tag} — {item.year}
+                      <span className="text-xl font-black text-white group-hover:text-codary-red transition-colors">
+                        {item.tag} {item.year}
                       </span>
                     </div>
                     

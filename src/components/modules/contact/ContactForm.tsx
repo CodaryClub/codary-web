@@ -63,7 +63,7 @@ export const ContactForm = () => {
             >
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-xs font-black uppercase tracking-widest text-gray-300 ml-1">
+                  <label htmlFor="name" className="text-md font-black text-gray-300 ml-1">
                     Tu Nombre
                   </label>
                   <input
@@ -77,8 +77,8 @@ export const ContactForm = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-xs font-black uppercase tracking-widest text-gray-300 ml-1">
-                    Coordinadas (Email)
+                  <label htmlFor="email" className="text-md font-black text-gray-300 ml-1">
+                    Tu Email
                   </label>
                   <input
                     type="email"
@@ -92,7 +92,7 @@ export const ContactForm = () => {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="message" className="text-xs font-black uppercase tracking-widest text-gray-300 ml-1">
+                <label htmlFor="message" className="text-md font-black text-gray-300 ml-1">
                   Tu Mensaje
                 </label>
                 <textarea
@@ -113,7 +113,7 @@ export const ContactForm = () => {
                 whileTap={{ scale: 0.98 }}
                 type="submit"
                 disabled={status === 'loading'}
-                className={`w-full font-black uppercase tracking-[0.2em] py-5 rounded-2xl transition-all flex items-center justify-center space-x-3 shadow-2xl ${
+                className={`w-full text-lg font-black py-5 rounded-2xl transition-all flex items-center justify-center space-x-3 shadow-2xl ${
                   status === 'success' ? 'bg-green-500' : 
                   status === 'error' ? 'bg-red-500' : 
                   'bg-codary-red hover:bg-red-700'
