@@ -5,8 +5,8 @@ import matrixGif from '../../../assets/icons/matrix-code.gif';
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-[100svh] pt-32 md:pt-32 pb-20 overflow-hidden bg-transparent transition-colors duration-300">
-      <div className="absolute inset-0 -z-30 pointer-events-none overflow-hidden">
+    <section className="relative pt-32 md:pt-32 pb-20 overflow-hidden bg-transparent transition-colors duration-300">
+      <div className="absolute inset-0 z-30 pointer-events-none overflow-hidden">
         <div 
           className="absolute inset-0 opacity-[0.15] transition-opacity duration-300"
           style={{ 
