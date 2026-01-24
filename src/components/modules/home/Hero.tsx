@@ -5,8 +5,7 @@ import matrixGif from '../../../assets/icons/matrix-code.gif';
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-[115vh] flex items-center justify-center overflow-hidden bg-transparent transition-colors duration-300">
-      {/* Background Matrix Effect */}
+    <section className="relative min-h-[115vh] pt-32 md:pt-36 pb-20 overflow-hidden bg-transparent transition-colors duration-300">
       <div className="absolute inset-0 -z-30 pointer-events-none overflow-hidden">
         <div 
           className="absolute inset-0 opacity-[0.10] dark:opacity-[0.15] transition-opacity duration-300"
@@ -23,7 +22,6 @@ export const Hero = () => {
         />
       </div>
 
-      {/* Atmospheric Background Globs */}
       <div className="absolute top-1/4 -left-20 w-96 h-96 bg-codary-red/10 rounded-full blur-[100px] animate-pulse pointer-events-none" />
       <div className="absolute bottom-1/4 -right-20 w-[500px] h-[500px] bg-red-500/5 rounded-full blur-[120px] pointer-events-none" />
 
@@ -33,7 +31,6 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          {/* Logo Section */}
           <div className="flex justify-center mb-10 md:mb-16 relative mt-0 md:mt-10">
             <div className="absolute inset-0 bg-codary-red/15 blur-[80px] rounded-full transform scale-140 animate-pulse" />
             
@@ -72,7 +69,6 @@ export const Hero = () => {
             </motion.p>
           </div>
           
-          {/* Action Buttons */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
