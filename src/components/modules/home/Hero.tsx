@@ -59,7 +59,7 @@ export const Hero = () => {
                 damping: 20,
                 delay: 0.2 
               }}
-              className="text-6xl md:text-9xl font-black tracking-tighter will-change-transform"
+              className="text-6xl md:text-9xl font-black will-change-transform"
             >
               <span className="bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-codary-red filter drop-shadow-sm">
                 Codary
@@ -70,9 +70,9 @@ export const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 1 }}
-              className="text-xl md:text-4xl text-red-100/90 max-w-4xl mx-auto font-light leading-tight tracking-tight px-6"
+              className="text-xl md:text-4xl text-white max-w-4xl mx-auto font-light leading-tight px-6"
             >
-              <span className="font-semibold text-gray-200"> Innovación en código,</span> <span className="text-codary-red font-bold text-glow">comunidad en acción</span>
+              <span className="font-semibold text-white"> Innovación en código,</span> <span className="text-codary-red font-bold text-glow">comunidad en acción</span>
             </motion.p>
           </div>
           

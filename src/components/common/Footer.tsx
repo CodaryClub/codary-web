@@ -17,7 +17,7 @@ export const Footer = () => {
           <div className="md:col-span-5 space-y-8">
             <div className="flex items-center gap-4">
               <img src={codaryLogo} alt="Codary" className="h-12 w-12" />
-              <span className="text-3xl text-white font-black tracking-tighter">Codary</span>
+              <span className="text-3xl text-white font-black">Codary</span>
             </div>
             <p className="text-xl text-white leading-relaxed max-w-sm">
               Innovación en código, <span className="text-codary-red font-bold">comunidad en acción.</span>
@@ -65,7 +65,7 @@ export const Footer = () => {
                <p className="text-lg text-white mb-6 relative z-10 leading-relaxed">
                  ¿Listo para hackear tu futuro? Únete a nuestras sesiones de alto impacto y escala tu carrera técnica.
                </p>
-               <a href="#contact" className="inline-flex items-center text-md font-black tracking-widest text-codary-red group-hover:gap-4 gap-2 transition-all relative z-10">
+               <a href="#contact" className="inline-flex items-center text-md font-black text-codary-red group-hover:gap-4 gap-2 transition-all relative z-10">
                  Enviar Solicitud <ArrowUp className="rotate-45" size={16} />
                </a>
                <div className="absolute inset-0 bg-codary-red/5 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-700" />

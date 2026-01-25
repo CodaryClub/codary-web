@@ -83,7 +83,7 @@ export const Navbar = () => {
                   className="w-full h-full object-contain relative z-10 transition-transform duration-500 group-hover:rotate-6"
                 />
               </div>
-              <span className="text-xl md:text-2xl font-black text-white tracking-tighter">
+              <span className="text-xl md:text-2xl font-black text-white">
                 Codary
               </span>
             </a>
@@ -149,7 +149,7 @@ export const Navbar = () => {
                   >
                     <div className="flex items-center gap-6">
                       <span className="w-2 h-[2px] bg-codary-red/50 self-center" />
-                      <span className="text-3xl font-black tracking-tighter text-white group-active:text-codary-red transition-colors">
+                      <span className="text-3xl font-black text-white group-active:text-codary-red transition-colors">
                         {link.name}
                       </span>
                     </div>

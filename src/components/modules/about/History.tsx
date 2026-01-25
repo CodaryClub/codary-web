@@ -42,7 +42,7 @@ export const History = () => {
           viewport={{ once: true }}
           className="text-center mb-32"
         >
-          <h2 className="text-5xl md:text-6xl font-black text-white mb-8 tracking-tighter">
+          <h2 className="text-5xl md:text-6xl font-black text-white mb-8">
             Nuestra <span className="text-codary-red">Historia</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
@@ -89,7 +89,7 @@ export const History = () => {
                       </span>
                     </div>
                     
-                    <h3 className="text-3xl font-black text-white mb-4 tracking-tight">
+                    <h3 className="text-3xl font-black text-white mb-4">
                       {item.title}
                     </h3>
                     <p className="text-lg text-gray-400 leading-relaxed font-light">

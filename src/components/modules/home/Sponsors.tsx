@@ -20,7 +20,7 @@ export const Sponsors = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-20 will-change-transform"
         >
-          <h2 className="text-5xl md:text-6xl font-black text-white mb-8 tracking-tighter">
+          <h2 className="text-5xl md:text-6xl font-black text-white mb-8">
             Alianzas <span className="text-codary-red">Estratégicas</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
@@ -60,7 +60,7 @@ export const Sponsors = () => {
                 <span className="block text-md font-black text-codary-red mb-1">
                   {sponsor.type}
                 </span>
-                <span className="text-xl font-bold text-gray-200">
+                <span className="text-xl font-bold text-white">
                   {sponsor.name}
                 </span>
               </div>

@@ -41,7 +41,7 @@ export const ContactForm = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16 will-change-transform"
           >
-            <h2 className="text-5xl md:text-6xl font-black text-white mb-6 tracking-tighter">
+            <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
               ¿Listo para subir al <span className="text-codary-red">Siguiente Nivel</span>?
             </h2>
             <p className="text-xl text-gray-400 font-light leading-relaxed">
@@ -63,28 +63,28 @@ export const ContactForm = () => {
             >
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-md font-black text-gray-300 ml-1">
+                  <label htmlFor="name" className="text-md font-black text-gray-400 ml-1">
                     Tu Nombre
                   </label>
                   <input
                     type="text"
                     id="name"
                     name="user_name"
-                    className="w-full px-6 py-4 rounded-2xl border-2 border-gray-500/40 bg-black/20 text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-gray-400/50"
+                    className="w-full px-6 py-4 rounded-2xl border-2 border-gray-400/60 bg-black/20 text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-white/60"
                     placeholder="Ej. Linus Torvalds"
                     required
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-md font-black text-gray-300 ml-1">
+                  <label htmlFor="email" className="text-md font-black text-gray-400 ml-1">
                     Tu Email
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="user_email"
-                    className="w-full px-6 py-4 rounded-2xl border-2 border-gray-500/40 bg-black/20 text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-gray-400/50"
+                    className="w-full px-6 py-4 rounded-2xl border-2 border-gray-400/60 bg-black/20 text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-white/60"
                     placeholder="linustv@gmail.com"
                     required
                   />
@@ -92,14 +92,14 @@ export const ContactForm = () => {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="message" className="text-md font-black text-gray-300 ml-1">
+                <label htmlFor="message" className="text-md font-black text-gray-400 ml-1">
                   Tu Mensaje
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   rows={5}
-                  className="w-full px-6 py-4 rounded-2xl border-2 border-gray-500/40 bg-black/20 text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-gray-400/50 resize-none"
+                  className="w-full px-6 py-4 rounded-2xl border-2 border-gray-400/60 bg-black/20 text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-white/60 resize-none"
                   placeholder="Hablemos sobre innovación..."
                   required
                 />

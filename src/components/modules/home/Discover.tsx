@@ -12,7 +12,7 @@ export const Discover = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-20 will-change-transform"
         >
-          <h2 className="text-5xl md:text-6xl font-black text-white mb-8 tracking-tighter">
+          <h2 className="text-5xl md:text-6xl font-black text-white mb-8">
             Descubre <span className="text-codary-red">Codary</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
@@ -57,7 +57,7 @@ export const Discover = () => {
               <div className={`w-14 h-14 md:w-16 md:h-16 ${item.glow} rounded-2xl flex items-center justify-center mb-8 border border-white/5 group-hover:scale-110 transition-transform duration-500 will-change-transform`}>
                 <item.icon className={`h-7 w-7 md:h-8 md:w-8 ${item.color}`} />
               </div>
-              <h3 className="text-2xl md:text-3xl font-black mb-6 text-white tracking-tight">{item.title}</h3>
+              <h3 className="text-2xl md:text-3xl font-black mb-6 text-white">{item.title}</h3>
               <p className="text-lg text-gray-400 font-light leading-relaxed mb-6">
                 {item.description}
               </p>

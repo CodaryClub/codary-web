@@ -42,10 +42,10 @@ export const Technologies = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-20 will-change-transform"
         >
-          <h2 className="text-5xl md:text-6xl font-black text-white mb-6 tracking-tight">
+          <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
             Nuestro stack <span className="text-codary-red">Tecnológico</span>
           </h2>
-          <p className="text-lg text-gray-400 font-light tracking-wide">
+          <p className="text-lg text-gray-400 font-light">
             Elegimos solo las mejores herramientas para forjar el futuro.
           </p>
         </motion.div>

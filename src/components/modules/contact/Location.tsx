@@ -59,7 +59,7 @@ export const Location = () => {
               <span className="text-2xl font-black text-codary-red mb-4 block">
                 Presencia Física
               </span>
-              <h2 className="text-5xl md:text-6xl font-black text-white mb-6 tracking-tight">
+              <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
                 Nuestra <span className="text-codary-red">Ubicación</span>
               </h2>
               <p className="text-xl text-gray-400 font-light leading-relaxed">
@@ -114,7 +114,7 @@ export const Location = () => {
                   <div className="w-full h-full flex items-center justify-center bg-black/20">
                     <div className="flex flex-col items-center space-y-4">
                       <Loader2 className="h-10 w-10 animate-spin text-codary-red" />
-                      <span className="text-xs font-black uppercase tracking-widest text-gray-500">Cargando Mapa...</span>
+                      <span className="text-xs font-black uppercase text-gray-400">Cargando Mapa...</span>
                     </div>
                   </div>
                 }

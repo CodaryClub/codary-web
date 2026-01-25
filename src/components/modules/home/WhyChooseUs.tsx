@@ -48,7 +48,7 @@ export const WhyChooseUs = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-center mb-20 will-change-transform"
           >
-            <h2 className="text-5xl md:text-6xl font-black text-white mb-8 tracking-tighter">
+            <h2 className="text-5xl md:text-6xl font-black text-white mb-8">
               ¿Por qué <span className="text-codary-red">Codary</span>?
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
@@ -87,7 +87,7 @@ export const WhyChooseUs = () => {
                 <feature.icon className="h-8 w-8" />
               </div>
 
-              <h3 className="text-2xl font-bold mb-4 text-white tracking-tight group-hover:text-white transition-colors">
+              <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-white transition-colors">
                 {feature.title}
               </h3>
               <p className="text-gray-400 leading-relaxed font-light">

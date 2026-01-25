@@ -76,7 +76,6 @@ const TeamMember = ({ member, index }: { member: any, index: number }) => (
     className="glass-card group relative p-10 rounded-3xl overflow-hidden cursor-pointer will-change-transform"
   >
     <div className="relative mb-8 flex justify-center">
-      {/* Optimized glow - using a simpler gradient instead of heavy blur if possible, but keeping the vibe */}
       <div className="absolute inset-0 bg-codary-red/20 blur-[30px] rounded-full scale-75 opacity-0 group-hover:opacity-100 transition-opacity duration-500 will-change-[opacity]" />
       
       <div className="relative w-32 h-32 rounded-full overflow-hidden p-1 border-2 border-white/10 group-hover:border-codary-red transition-colors duration-500">
@@ -108,10 +107,10 @@ const TeamMember = ({ member, index }: { member: any, index: number }) => (
     </div>
     
     <div className="text-center">
-      <h3 className="text-xl font-black text-white mb-2 tracking-tight group-hover:text-codary-red transition-colors">
+      <h3 className="text-xl font-black text-white mb-2 transition-colors">
         {member.name}
       </h3>
-      <p className="text-md font-black text-gray-500 mb-4">
+      <p className="text-md font-black text-codary-red mb-4">
         {member.role}
       </p>
       <div className="w-8 h-1 bg-white/10 mx-auto group-hover:w-16 group-hover:bg-codary-red transition-all duration-500" />
@@ -129,7 +128,7 @@ export const Team = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
           >
-             <h2 className="text-5xl md:text-6xl font-black text-white mb-8 tracking-tighter">
+             <h2 className="text-5xl md:text-6xl font-black text-white mb-8">
               Nuestro <span className="text-codary-red">Equipo</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
