@@ -11,7 +11,7 @@ const sponsors = [
 
 export const Sponsors = () => {
   return (
-    <section className="py-20 bg-transparent transition-colors duration-300 relative overflow-hidden">
+    <section className="py-5 bg-transparent transition-colors duration-300 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -47,12 +47,12 @@ export const Sponsors = () => {
               }}
               className="glass-card group flex relative p-10 rounded-3xl overflow-hidden cursor-pointer will-change-transform"
             >
-              <div className="relative">
-                <div className="absolute inset-0 bg-white/30 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none will-change-[opacity]" />
+              <div className="relative flex items-center justify-center">
+                <div className="absolute inset-0 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none will-change-[opacity]" />
                 <img 
                   src={sponsor.image} 
                   alt={sponsor.name} 
-                  className="h-12 md:h-16 object-contain relative z-10 filter grayscale group-hover:grayscale-0 transition-all duration-700 will-change-[filter]" 
+                  className="h-14 md:h-16 object-contain relative z-10 filter transition-all duration-700 will-change-[filter]" 
                   loading="lazy"
                 />
               </div>

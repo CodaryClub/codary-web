@@ -14,32 +14,24 @@ export const Location = () => {
       label: 'Dirección',
       value: 'Vargas Machuca, Cuenca, Ecuador',
       icon: MapPin,
-      color: 'text-blue-500',
-      bg: 'bg-blue-500/10',
       link: 'https://maps.google.com/?q=Vargas+Machuca,+Cuenca,+Ecuador'
     },
     {
       label: 'Email',
       value: 'codary.club@gmail.com',
       icon: Mail,
-      color: 'text-teal-500',
-      bg: 'bg-teal-500/10',
       link: 'mailto:codary.club@gmail.com'
     },
     {
       label: 'GitHub',
       value: 'CodaryClub',
       icon: Github,
-      color: 'text-purple-500',
-      bg: 'bg-purple-500/10',
       link: 'https://github.com/CodaryClub'
     },
     {
       label: 'Instagram',
       value: '@club_codary',
       icon: Instagram,
-      color: 'text-codary-red',
-      bg: 'bg-codary-red/10',
       link: 'https://www.instagram.com/club_codary'
     }
   ];
@@ -84,12 +76,15 @@ export const Location = () => {
                     y: -8,
                     transition: { type: "spring", stiffness: 400, damping: 25 }
                   }}
-                  className="glass-card group relative p-10 rounded-3xl overflow-hidden cursor-pointer will-change-transform"
+                  className="glass-card group relative p-5 rounded-3xl overflow-hidden cursor-pointer will-change-transform"
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <div className={`p-3 rounded-2xl ${info.bg} ${info.color} group-hover:scale-110 transition-transform duration-500 will-change-transform`}>
+                  <div className="flex items-center justify-start mb-4">
+                    <div className={`p-3 rounded-2xl bg-white/10 group-hover:scale-110 transition-transform duration-500 will-change-transform`}>
                       <info.icon size={24} />
                     </div>
+                    <p className={`text-lg text-gray-400 font-black ml-4`}>
+                      {info.label}
+                    </p>
                   </div>
                   <div>
                     <p className="text-lg font-bold text-white">
@@ -106,7 +101,7 @@ export const Location = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-20px" }}
             transition={{ type: "spring", stiffness: 100, damping: 20 }}
-            className="h-[500px] glass-card rounded-[3rem] overflow-hidden shadow-2xl relative border-white/10 z-0 p-2 will-change-transform"
+            className="h-[565px] glass-card rounded-[3rem] overflow-hidden shadow-2xl relative border-white/10 z-0 p-2 will-change-transform"
           >
             <div className="w-full h-full rounded-[2.5rem] overflow-hidden border border-white/5">
               <Suspense
