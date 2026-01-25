@@ -88,7 +88,7 @@ const TeamMember = ({ member, index }: { member: any, index: number }) => (
         <img 
           src={member.image} 
           alt={member.name} 
-          className="h-200 w-350 object-cover rounded-full grayscale group-hover:grayscale-0 transition-transform duration-700 group-hover:scale-110" 
+          className="object-cover rounded-full transition-transform duration-700 group-hover:scale-110" 
           loading="lazy"
         />
       </div>

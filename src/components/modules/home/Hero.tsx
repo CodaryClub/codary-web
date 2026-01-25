@@ -89,7 +89,7 @@ export const Hero = () => {
           >
             <a 
               href="#technologies" 
-              className="w-full sm:w-auto px-10 md:px-12 py-4 md:py-5 bg-codary-red text-white rounded-full font-black text-lg md:text-xl hover:bg-red-700 transition-all shadow-[0_20px_40px_rgba(230,57,70,0.3)] hover:shadow-[0_25px_50px_rgba(230,57,70,0.4)] hover:-translate-y-2 flex items-center justify-center group active:scale-95 will-change-transform"
+              className="w-full sm:w-auto px-10 md:px-12 py-4 md:py-5 bg-codary-red text-white rounded-full font-black text-lg md:text-xl hover:bg-red-700 transition-all shadow-[0_5px_40px_rgba(230,57,70,0.3)] hover:shadow-[0_25px_50px_rgba(230,57,70,0.4)] hover:-translate-y-2 flex items-center justify-center group active:scale-95 will-change-transform"
             >
               Descubre Más
               <ChevronRight className="ml-2 h-6 md:h-7 w-6 md:w-7 group-hover:translate-x-2 transition-transform" />
