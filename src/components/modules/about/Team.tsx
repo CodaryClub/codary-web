@@ -1,24 +1,30 @@
-import { Github, Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';
+import alexisImg from '../../../assets/icons/team/alexis.jpeg';
+import danielImg from '../../../assets/icons/team/daniel.jpeg';
+import sebastianImg from '../../../assets/icons/team/sebastian.jpeg';
+import andresImg from '../../../assets/icons/team/andres.jpeg';
+import mateoImg from '../../../assets/icons/team/mateo.jpeg';
+import genesisImg from '../../../assets/icons/team/genesis.jpeg';
+import juanImg from '../../../assets/icons/team/juan.jpeg';
 
 const team = {
   frontend: [
     { 
       name: 'Daniel Puma', 
       role: 'Líder Frontend', 
-      image: 'https://imgs.search.brave.com/bHVdH5vDW3tZZDStUEXmc9Z0BcRQMIj-hdqJ8YXmP2c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjYv/NzA4LzUyNy9zbWFs/bC9taW5pbWFsaXN0/LXVzZXItcHJvZmls/ZS1pY29uLW9uLXRy/YW5zcGFyZW50LWJh/Y2tncm91bmQtcG5n/LnBuZw',
+      image: danielImg,
       socials: { github: '#', linkedin: '#'}
     },
     { 
       name: 'Alexis Ramirez', 
       role: 'UI/UX Designer', 
-      image: 'https://imgs.search.brave.com/bHVdH5vDW3tZZDStUEXmc9Z0BcRQMIj-hdqJ8YXmP2c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjYv/NzA4LzUyNy9zbWFs/bC9taW5pbWFsaXN0/LXVzZXItcHJvZmls/ZS1pY29uLW9uLXRy/YW5zcGFyZW50LWJh/Y2tncm91bmQtcG5n/LnBuZw',
+      image: alexisImg,
       socials: { github: '#', linkedin: '#'}
     },
     { 
       name: 'Sebastian Jara', 
       role: 'Cloud Developer', 
-      image: 'https://imgs.search.brave.com/bHVdH5vDW3tZZDStUEXmc9Z0BcRQMIj-hdqJ8YXmP2c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjYv/NzA4LzUyNy9zbWFs/bC9taW5pbWFsaXN0/LXVzZXItcHJvZmls/ZS1pY29uLW9uLXRy/YW5zcGFyZW50LWJh/Y2tncm91bmQtcG5n/LnBuZw',
+      image: sebastianImg,
       socials: { github: '#', linkedin: '#'}
     },
   ],
@@ -26,7 +32,7 @@ const team = {
     { 
       name: 'Mateo Pacheco', 
       role: 'Líder Backend', 
-      image: 'https://imgs.search.brave.com/bHVdH5vDW3tZZDStUEXmc9Z0BcRQMIj-hdqJ8YXmP2c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjYv/NzA4LzUyNy9zbWFs/bC9taW5pbWFsaXN0/LXVzZXItcHJvZmls/ZS1pY29uLW9uLXRy/YW5zcGFyZW50LWJh/Y2tncm91bmQtcG5n/LnBuZw',
+      image: mateoImg,
       socials: { github: 'https://github.com/mateo-pacheco', linkedin: 'https://www.linkedin.com/in/mateo-pacheco-572312340'}
     },
     { 
@@ -36,9 +42,9 @@ const team = {
       socials: { github: '#', linkedin: '#'}
     },
     { 
-      name: 'José Abad', 
+      name: 'Andrés Abad', 
       role: 'Node.js Developer', 
-      image: 'https://imgs.search.brave.com/bHVdH5vDW3tZZDStUEXmc9Z0BcRQMIj-hdqJ8YXmP2c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjYv/NzA4LzUyNy9zbWFs/bC9taW5pbWFsaXN0/LXVzZXItcHJvZmls/ZS1pY29uLW9uLXRy/YW5zcGFyZW50LWJh/Y2tncm91bmQtcG5n/LnBuZw',
+      image: andresImg,
       socials: { github: '#', linkedin: '#'}
     },
   ],
@@ -46,13 +52,13 @@ const team = {
     { 
       name: 'Genesis Gaón', 
       role: 'Estratega de T. D.', 
-      image: 'https://imgs.search.brave.com/bHVdH5vDW3tZZDStUEXmc9Z0BcRQMIj-hdqJ8YXmP2c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjYv/NzA4LzUyNy9zbWFs/bC9taW5pbWFsaXN0/LXVzZXItcHJvZmls/ZS1pY29uLW9uLXRy/YW5zcGFyZW50LWJh/Y2tncm91bmQtcG5n/LnBuZw',
+      image: genesisImg,
       socials: { linkedin: '#'}
     },
     { 
       name: 'Juan Sebastian', 
       role: 'Estratega de T. D.', 
-      image: 'https://imgs.search.brave.com/bHVdH5vDW3tZZDStUEXmc9Z0BcRQMIj-hdqJ8YXmP2c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjYv/NzA4LzUyNy9zbWFs/bC9taW5pbWFsaXN0/LXVzZXItcHJvZmls/ZS1pY29uLW9uLXRy/YW5zcGFyZW50LWJh/Y2tncm91bmQtcG5n/LnBuZw',
+      image: juanImg,
       socials: { linkedin: '#'}
     },
   ]
@@ -78,32 +84,16 @@ const TeamMember = ({ member, index }: { member: any, index: number }) => (
     <div className="relative mb-8 flex justify-center">
       <div className="absolute inset-0 bg-codary-red/20 blur-[30px] rounded-full scale-75 opacity-0 group-hover:opacity-100 transition-opacity duration-500 will-change-[opacity]" />
       
-      <div className="relative w-32 h-32 rounded-full overflow-hidden p-1 border-2 border-white/10 group-hover:border-codary-red transition-colors duration-500">
+      <div className="relative w-60 h-50 rounded-full overflow-hidden p-1 border-2 border-white/10 group-hover:border-codary-red transition-colors duration-500">
         <img 
           src={member.image} 
           alt={member.name} 
-          className="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition-transform duration-700 group-hover:scale-110" 
+          className="h-200 w-350 object-cover rounded-full grayscale group-hover:grayscale-0 transition-transform duration-700 group-hover:scale-110" 
           loading="lazy"
         />
       </div>
 
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <motion.div 
-          initial={false}
-          className="flex space-x-3 bg-white/10 backdrop-blur-md rounded-2xl p-2 border border-white/20 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 pointer-events-auto"
-        >
-          {member.socials?.github && (
-            <a href={member.socials.github} target="_blank" rel="noopener noreferrer" className="p-2 text-white hover:text-codary-red transition-colors">
-              <Github className="w-5 h-5" />
-            </a>
-          )}
-          {member.socials?.linkedin && (
-            <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 text-white hover:text-blue-600 transition-colors">
-              <Linkedin className="w-5 h-5" />
-            </a>
-          )}
-        </motion.div>
-      </div>
+      
     </div>
     
     <div className="text-center">
