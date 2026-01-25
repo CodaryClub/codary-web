@@ -44,7 +44,7 @@ export const Hero = () => {
               <img 
                 src={codaryLogo} 
                 alt="Codary" 
-                className="w-48 h-48 md:w-64 md:h-64 object-contain filter drop-shadow-[0_15px_30px_rgba(230,57,70,0.3)]" 
+                className="w-48 h-48 md:w-64 md:h-64 object-contain filter" 
               />
             </motion.div>
           </div>
@@ -61,7 +61,7 @@ export const Hero = () => {
               }}
               className="text-6xl md:text-9xl font-black will-change-transform"
             >
-              <span className="bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-codary-red filter drop-shadow-sm">
+              <span className="bg-clip-text text-transparent bg-codary-red filter drop-shadow-sm">
                 Codary
               </span>
             </motion.h1>
@@ -72,7 +72,7 @@ export const Hero = () => {
               transition={{ delay: 0.4, duration: 1 }}
               className="text-xl md:text-4xl text-white max-w-4xl mx-auto font-light leading-tight px-6"
             >
-              <span className="font-semibold text-white"> Innovación en código,</span> <span className="text-codary-red font-bold text-glow">comunidad en acción</span>
+              <span className="font-semibold text-white"> Innovación en código,</span> <span className="text-codary-red font-bold"> comunidad en acción</span>
             </motion.p>
           </div>
           
