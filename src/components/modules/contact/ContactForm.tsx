@@ -70,7 +70,7 @@ export const ContactForm = () => {
                     type="text"
                     id="name"
                     name="user_name"
-                    className="w-full px-6 py-4 rounded-2xl border-2 border-white/50 bg-black/20 text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-white/60"
+                    className="w-full px-6 py-4 rounded-2xl border-2 border-white/30 bg-black/20 text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-white/60"
                     placeholder="Ej. Linus Torvalds"
                     required
                   />
@@ -84,7 +84,7 @@ export const ContactForm = () => {
                     type="email"
                     id="email"
                     name="user_email"
-                    className="w-full px-6 py-4 rounded-2xl border-2 border-white/50 bg-black/20 text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-white/60"
+                    className="w-full px-6 py-4 rounded-2xl border-2 border-white/30 bg-black/20 text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-white/60"
                     placeholder="linustv@gmail.com"
                     required
                   />
@@ -99,7 +99,7 @@ export const ContactForm = () => {
                   id="message"
                   name="message"
                   rows={5}
-                  className="w-full px-6 py-4 rounded-2xl border-2 border-white/50 bg-black/20 text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-white/60 resize-none"
+                  className="w-full px-6 py-4 rounded-2xl border-2 border-white/30 bg-black/20 text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-white/60 resize-none"
                   placeholder="Hablemos sobre innovación..."
                   required
                 />
