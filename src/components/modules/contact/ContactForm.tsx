@@ -79,8 +79,7 @@ export const ContactForm = () => {
 
   const courses = [
     '1er Semestre', '2do Semestre', '3er Semestre', '4to Semestre', 
-    '5to Semestre', '6to Semestre', '7mo Semestre', '8vo Semestre', 
-    '9no Semestre', '10mo Semestre', 'Graduado/Alumni'
+    '5to Semestre', '6to Semestre', '7mo Semestre', '8vo Semestre'
   ];
 
   const specialties = [
@@ -208,7 +207,7 @@ export const ContactForm = () => {
                             id="phone"
                             name="user_phone"
                             className="w-full px-6 py-4 rounded-2xl border-2 border-white/20 bg-black/20 text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-white/40"
-                            placeholder="+593 123 456 789"
+                            placeholder="1234567890"
                             required
                           />
                         </div>
@@ -332,7 +331,7 @@ export const ContactForm = () => {
                           id="join_phone"
                           name="user_phone"
                           className="w-full px-6 py-4 rounded-2xl border-2 border-white/20 bg-black/20 text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-white/40"
-                          placeholder="+51 987 654 321"
+                          placeholder="1234567890"
                           required
                         />
                       </div>
