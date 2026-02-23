@@ -208,7 +208,7 @@ export const ContactForm = () => {
                             id="phone"
                             name="user_phone"
                             className="w-full px-6 py-4 rounded-2xl border-2 border-white/20 bg-black/20 text-white focus:ring-2 focus:ring-codary-red focus:border-transparent outline-none transition-all placeholder:text-white/40"
-                            placeholder="+51 123 456 789"
+                            placeholder="+593 123 456 789"
                             required
                           />
                         </div>
