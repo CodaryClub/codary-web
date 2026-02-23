@@ -7,6 +7,7 @@ import { History } from '../components/modules/about/History';
 import { Team } from '../components/modules/about/Team';
 import { ContactForm } from '../components/modules/contact/ContactForm';
 import { Location } from '../components/modules/contact/Location';
+import { FAQ } from '../components/modules/contact/FAQ';
 import { Discover } from '../components/modules/home/Discover';
 
 export const Home = () => {
@@ -43,6 +44,9 @@ export const Home = () => {
           <div id="team" className="scroll-mt-20">
             <Team />
           </div>
+        </div>
+        <div id="faq" className="scroll-mt-20">
+          <FAQ />
         </div>
         <div id="contact" className="scroll-mt-20">
           <ContactForm />
